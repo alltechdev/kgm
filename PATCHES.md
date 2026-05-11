@@ -1,9 +1,17 @@
 # GroupMe 15.71.4 — Patch Set
 
-Patched APK strips the Discover tab, all in-app WebView surfaces, the Profile
-glow-up nudge, the Help Center menu row, Facebook/Spotify/Interests profile
-sections, and all rich link previews in chat. Tappable URLs in chat still
-open in the system browser; everything else still works.
+Patched APK strips:
+
+1. The **Discover tab** and every internal entry point that opens it.
+2. Every in-app **WebView Activity / Fragment** (Help, NPS survey, Report Abuse, MS Visual Search, FB Custom Tabs, Campus Deals, MS Office Feedback).
+3. All **rich link previews** in chat — URLs stay tappable as plain text and open in the system browser.
+4. The **Facebook / Spotify / Interests** sections from the Profile screen.
+5. The **Help Center** row and **Profile glow-up** nudge banner from the More tab.
+6. The OneCamera crash when `getExternalFilesDir()` returns `null` — falls back to internal storage.
+7. **Facebook / Google / Microsoft** sign-in tiles (dead on a re-signed APK anyway) — only email + phone OTP remain.
+8. **Copilot** end-to-end — Ask Copilot, study-tool flashcards/quizzes, in-chat @mention, group "Message Copilot" permission row.
+
+Chat send/receive, group management, image attachments, contacts, calendar — all untouched.
 
 ## Inputs / outputs
 
@@ -13,8 +21,7 @@ open in the system browser; everything else still works.
 | `base/` | Patched apktool decompile (`apktool d -r`, no resources) |
 | `base-signed.apk` | Final aligned + debug-signed output |
 | `groupme-patches.diff` | Unified diff against a clean decompile |
-| `apply-patches.sh` | Driver: runs `patch -p1 -F 5`, falls back to python |
-| `apply-patches.py` | Anchor-based fallback; one tuple per `Edit()` call |
+| `apply-patches.sh` | Driver: runs `patch -p1 -F 5` |
 
 ## Rebuild from this repo
 
@@ -39,9 +46,9 @@ apktool d base.apk -o base -r
 
 ## Apply to a future version
 
-Re-decompile, then run `apply-patches.sh`. Hunks that no longer match because
-of upstream changes will land in `apply-patches.py`'s "anchor not found"
-report — fix the anchors and re-run.
+Re-decompile, then run `apply-patches.sh`. The `patch -p1 -F 5` invocation
+will fuzz-match up to 5 lines; anything beyond that will print `.rej` hunks
+that need to be merged manually.
 
 ---
 
@@ -192,23 +199,10 @@ permission row). Two layers of kills:
 - **Twitter button** in profile — hidden as collateral when we hid
   `section_socials`. Twitter integration is mostly defunct anyway.
 
-## Verification
-
-After install:
-
-```bash
-su -c "am start -n com.groupme.android/com.groupme.android.settings.BasicWebviewActivity"
-su -c "dumpsys activity activities | grep -E 'resumed|com.groupme'"
-```
-
-Expect: BasicWebviewActivity launches, but the top resumed activity stays as
-whatever it was (typically Termux) — the activity finished before painting.
-
-Build identifiers:
+## Build identifiers
 
 | Field | Value |
 |-------|-------|
 | `package` | `com.groupme.android` |
 | `versionName` | `15.71.4` |
 | `versionCode` | `261310204` |
-| Signer (debug) | SHA-256 `3abf70a677f92ad971000a4f5023077c3d4a8cf7b5840e38ce1fe51e5fcf1582` |
