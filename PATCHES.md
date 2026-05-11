@@ -148,6 +148,35 @@ doesn't know our debug-key SHA-1. Hide those tiles to avoid dead-end taps.
 
 Email + phone-number flows are untouched.
 
+### 8. Copilot stripped end-to-end
+
+Microsoft integrated Copilot deeply (Ask Copilot bottom sheet, study-tool
+flashcards/quizzes, in-chat @mention bot, group "Message Copilot"
+permission row). Two layers of kills:
+
+**Layer 1 — master ECS gates flipped:**
+
+| File | Edit |
+|------|------|
+| `copilot/CopilotV2State.smali` | `isCopilotChatEnabled()` returns `false` immediately — cascades to `isCopilotChat`, `isAskCopilotEnabled`, `isAskCopilotPlusPlusEnabled`, `isAskCopilotPlusPlusConsentDialogEnabled`, `isAskCopilotSendToGroupEnabled`, `isCopilotChatConsentDialogEnabled`, `isChatListHeaderButtonEnabled`, `isConsentCancelButtonEnabled` (all of which route through it) |
+| `copilot/CopilotV2State.smali` | `isCopilotGroupMentionSettingUIEnabled()` returns `false` immediately — the existing `GroupPreferences.updatePermissionSettings()` path then calls `removePreferenceSafe(mPermissionsCategory, mMsgCopilotPreference)`, which deletes the "Message Copilot / Everyone" row from group settings |
+
+**Layer 2 — every Copilot Fragment/Activity neutered (belt-and-suspenders against any code path that bypasses the ECS gate):**
+
+| Surface | Patch |
+|---|---|
+| `chat/CopilotConsentSheetFragment` | `onCreateView` → `null` |
+| `copilot/askcopilot/AskCopilotFragment` | `onCreateView` → `null` |
+| `copilot/askcopilot/AskCopilotBottomSheetFragment` | `onCreateView` → `null` |
+| `copilot/askcopilot/AskCopilotConsentFragment` | `onCreateView` → `null` |
+| `copilot/settings/CopilotSettingFragment` | `onCreateView` → `null` |
+| `copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment` | `onCreateView` → `null` |
+| `copilot/cards/share/ChatSelectorBottomSheetFragment` | `onCreateView` → `null` |
+| `group/settings/GroupSettingsMessageCopilotFragment` | `onCreateView` → `null` |
+| `copilot/settings/CopilotSettingActivity` | `onCreate` → `finish()` |
+| `copilot/cards/QuizFullScreenActivity` | `onCreate` → `finish()` |
+| `copilot/cards/FlashcardFullScreenActivity` | `onCreate` → `finish()` |
+
 ## What's untouched (intentional)
 
 - **`ChatActivity` / `ChatFragment`** still renders messages. Killing them

@@ -125,6 +125,21 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/co
      invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
  
      .line 762
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali base/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali	2026-05-11 14:55:17.888366693 -0400
++++ base/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali	2026-05-11 16:04:41.701834334 -0400
+@@ -479,6 +479,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 1
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_copilot
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 39
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-11 14:55:18.660366692 -0400
 +++ base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-11 15:14:01.301536993 -0400
@@ -171,6 +186,168 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/co
      .line 158
      new-instance p2, Landroid/os/Bundle;
  
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/CopilotV2State.smali base/smali_classes5/com/groupme/android/copilot/CopilotV2State.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/CopilotV2State.smali	2026-05-11 14:55:19.904366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/CopilotV2State.smali	2026-05-11 16:14:53.075886779 -0400
+@@ -476,6 +476,11 @@
+ .method public static final isCopilotChatEnabled()Z
+     .locals 2
+ 
++    const/4 v0, 0x0
++
++    return v0
++
++    :gone_copilot
+     .line 22
+     sget-object v0, Lcom/groupme/android/copilot/CopilotV2State;->chatEcs:Lcom/groupme/ecs/CopilotV2;
+ 
+@@ -622,6 +627,11 @@
+ .method public static final isCopilotGroupMentionSettingUIEnabled()Z
+     .locals 2
+ 
++    const/4 v0, 0x0
++
++    return v0
++
++    :gone_copilot_ui
+     .line 73
+     sget-object v0, Lcom/groupme/android/copilot/CopilotV2State;->groupEcs:Lcom/groupme/ecs/CopilotGroupConfig;
+ 
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotBottomSheetFragment.smali base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotBottomSheetFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotBottomSheetFragment.smali	2026-05-11 14:55:19.904366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotBottomSheetFragment.smali	2026-05-11 16:03:14.417834368 -0400
+@@ -948,6 +948,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 0
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_copilot
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 172
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotConsentFragment.smali base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotConsentFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotConsentFragment.smali	2026-05-11 14:55:19.908366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotConsentFragment.smali	2026-05-11 16:03:29.141834362 -0400
+@@ -157,6 +157,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 0
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_copilot
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 38
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotFragment.smali base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotFragment.smali	2026-05-11 14:55:19.988366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotFragment.smali	2026-05-11 16:03:42.325834357 -0400
+@@ -3429,6 +3429,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 0
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_copilot
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 180
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/cards/FlashcardFullScreenActivity.smali base/smali_classes5/com/groupme/android/copilot/cards/FlashcardFullScreenActivity.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/cards/FlashcardFullScreenActivity.smali	2026-05-11 14:55:20.096366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/cards/FlashcardFullScreenActivity.smali	2026-05-11 16:05:56.013834306 -0400
+@@ -1372,6 +1372,11 @@
+     .line 70
+     invoke-super {p0, p1}, Lcom/groupme/android/copilot/cards/Hilt_FlashcardFullScreenActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
++    :gone_copilot
+     .line 72
+     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+ 
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/cards/QuizFullScreenActivity.smali base/smali_classes5/com/groupme/android/copilot/cards/QuizFullScreenActivity.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/cards/QuizFullScreenActivity.smali	2026-05-11 14:55:20.100366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/cards/QuizFullScreenActivity.smali	2026-05-11 16:05:42.893834311 -0400
+@@ -1272,6 +1272,11 @@
+     .line 66
+     invoke-super {p0, p1}, Lcom/groupme/android/copilot/cards/Hilt_QuizFullScreenActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
++    :gone_copilot
+     const/4 v0, 0x3
+ 
+     const/4 v1, 0x0
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment.smali base/smali_classes5/com/groupme/android/copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment.smali	2026-05-11 14:55:20.124366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment.smali	2026-05-11 16:03:56.881834352 -0400
+@@ -786,6 +786,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 6
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_copilot
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 71
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/cards/share/ChatSelectorBottomSheetFragment.smali base/smali_classes5/com/groupme/android/copilot/cards/share/ChatSelectorBottomSheetFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/cards/share/ChatSelectorBottomSheetFragment.smali	2026-05-11 14:55:20.152366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/cards/share/ChatSelectorBottomSheetFragment.smali	2026-05-11 16:04:12.533834346 -0400
+@@ -603,6 +603,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 6
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_copilot
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 87
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingActivity.smali base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingActivity.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingActivity.smali	2026-05-11 14:55:20.192366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingActivity.smali	2026-05-11 16:05:28.321834317 -0400
+@@ -75,6 +75,11 @@
+     .line 13
+     invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
++    :gone_copilot
+     .line 15
+     sget p1, Lcom/groupme/android/R$layout;->simple_toolbar_activity:I
+ 
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingFragment.smali base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingFragment.smali	2026-05-11 14:55:20.196366692 -0400
++++ base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingFragment.smali	2026-05-11 16:04:25.657834341 -0400
+@@ -198,6 +198,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 1
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_copilot
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 30
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-11 14:55:20.756366691 -0400
 +++ base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-11 15:14:01.301536993 -0400
@@ -202,6 +379,21 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/co
      invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
  
      .line 61
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/settings/GroupSettingsMessageCopilotFragment.smali base/smali_classes5/com/groupme/android/group/settings/GroupSettingsMessageCopilotFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/group/settings/GroupSettingsMessageCopilotFragment.smali	2026-05-11 14:55:21.324366691 -0400
++++ base/smali_classes5/com/groupme/android/group/settings/GroupSettingsMessageCopilotFragment.smali	2026-05-11 16:04:55.373834329 -0400
+@@ -215,6 +215,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 0
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_copilot
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 36
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/login/LoginFragment.smali base/smali_classes5/com/groupme/android/login/LoginFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/login/LoginFragment.smali	2026-05-11 14:55:21.524366691 -0400
 +++ base/smali_classes5/com/groupme/android/login/LoginFragment.smali	2026-05-11 15:14:47.389536975 -0400
