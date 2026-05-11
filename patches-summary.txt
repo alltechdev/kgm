@@ -1,0 +1,5 @@
+- Discover tab removed
+- All WebView activities and fragments disabled
+- Link previews in chat disabled (URLs stay tappable)
+- Facebook, Spotify, and Interests sections removed from Profile
+- Help Center row and Profile glow-up banner removed from More tab

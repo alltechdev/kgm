@@ -1,0 +1,548 @@
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes3/com/facebook/CustomTabActivity.smali base/smali_classes3/com/facebook/CustomTabActivity.smali
+--- base_clean/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-11 11:55:11.787535950 -0400
++++ base/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-11 11:08:08.451177864 -0400
+@@ -208,7 +208,12 @@
+     .line 26
+     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 27
++    :gone_fb_customtab
+     new-instance p1, Landroid/content/Intent;
+ 
+     const-class v0, Lcom/facebook/CustomTabMainActivity;
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes3/com/facebook/CustomTabMainActivity.smali base/smali_classes3/com/facebook/CustomTabMainActivity.smali
+--- base_clean/smali_classes3/com/facebook/CustomTabMainActivity.smali	2026-05-11 11:55:11.803535950 -0400
++++ base/smali_classes3/com/facebook/CustomTabMainActivity.smali	2026-05-11 11:08:21.967177859 -0400
+@@ -343,7 +343,12 @@
+     .line 31
+     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 34
++    :gone_fb_customtabmain
+     sget-object v0, Lcom/facebook/CustomTabActivity;->CUSTOM_TAB_REDIRECT_ACTION:Ljava/lang/String;
+ 
+     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes4/com/groupme/android/more/MoreTabFragment.smali base/smali_classes4/com/groupme/android/more/MoreTabFragment.smali
+--- base_clean/smali_classes4/com/groupme/android/more/MoreTabFragment.smali	2026-05-11 11:55:15.395535949 -0400
++++ base/smali_classes4/com/groupme/android/more/MoreTabFragment.smali	2026-05-11 11:24:04.419177499 -0400
+@@ -430,21 +430,6 @@
+ 
+     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+ 
+-    .line 299
+-    iget-object v0, p0, Lcom/groupme/android/more/MoreTabFragment;->mMoreOptions:Ljava/util/ArrayList;
+-
+-    new-instance v1, Lcom/groupme/android/more/MoreOptionsItem;
+-
+-    sget-object v2, Lcom/groupme/android/more/MoreOptionsItem$MoreOptions;->HELP_FEEDBACK:Lcom/groupme/android/more/MoreOptionsItem$MoreOptions;
+-
+-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+-
+-    move-result-object v3
+-
+-    invoke-direct {v1, v2, v3}, Lcom/groupme/android/more/MoreOptionsItem;-><init>(Lcom/groupme/android/more/MoreOptionsItem$MoreOptions;Landroid/content/Context;)V
+-
+-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+-
+     .line 300
+     iget-object v0, p0, Lcom/groupme/android/more/MoreTabFragment;->mMoreOptions:Ljava/util/ArrayList;
+ 
+@@ -1728,7 +1713,7 @@
+ 
+     if-eqz v2, :cond_1
+ 
+-    const/4 v2, 0x0
++    const/16 v2, 0x8
+ 
+     goto :goto_0
+ 
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/HomeActivity.smali base/smali_classes5/com/groupme/android/HomeActivity.smali
+--- base_clean/smali_classes5/com/groupme/android/HomeActivity.smali	2026-05-11 11:55:15.275535949 -0400
++++ base/smali_classes5/com/groupme/android/HomeActivity.smali	2026-05-11 11:03:37.667177967 -0400
+@@ -2683,11 +2683,6 @@
+ .method public final loadDiscoverFragment(Ljava/lang/String;Ljava/lang/String;Lcom/groupme/android/group/directory/OpenDirectoryEntryPoint;I)V
+     .locals 9
+ 
+-    .line 1377
+-    iget-boolean v0, p0, Lcom/groupme/android/HomeActivity;->mSwitchingTabs:Z
+-
+-    if-eqz v0, :cond_0
+-
+     return-void
+ 
+     :cond_0
+@@ -5566,6 +5561,8 @@
+ 
+     move-result v1
+ 
++    const/4 v1, 0x0
++
+     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+ 
+     .line 762
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali
+--- base_clean/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-11 11:55:16.903535948 -0400
++++ base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-11 11:30:45.315177346 -0400
+@@ -127,6 +127,13 @@
+ 
+     move-object/from16 v0, p1
+ 
++    const/16 v2, 0x8
++
++    invoke-virtual {v1, v0, v2}, Lcom/groupme/android/chat/inline/HtmlPreviewInlineContent;->setVisibility(Landroid/view/View;I)V
++
++    return-void
++
++    :gone_bindview
+     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     invoke-virtual/range {p2 .. p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali base/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali
+--- base_clean/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali	2026-05-11 11:55:16.907535948 -0400
++++ base/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali	2026-05-11 11:35:00.359177249 -0400
+@@ -730,6 +730,13 @@
+ 
+     move-object/from16 v5, p3
+ 
++    invoke-virtual {p0, v5}, Lcom/groupme/android/chat/inline/InlineContentLoader;->hideInlineContent(Landroid/view/View;)V
++
++    const/4 v0, 0x0
++
++    return v0
++
++    :gone_processmsg
+     .line 85
+     invoke-virtual {p1}, Lcom/groupme/model/Message;->getConversationId()Ljava/lang/String;
+ 
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali base/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali
+--- base_clean/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali	2026-05-11 11:55:17.319535948 -0400
++++ base/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali	2026-05-11 11:03:15.999177976 -0400
+@@ -219,6 +219,8 @@
+ 
+     if-eqz p2, :cond_5
+ 
++    return-void
++
+     .line 158
+     new-instance p2, Landroid/os/Bundle;
+ 
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali
+--- base_clean/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-11 11:55:18.095535948 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-11 11:25:44.927177461 -0400
+@@ -113,7 +113,12 @@
+     .line 37
+     invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 38
++    :gone_campus
+     sget p1, Lcom/groupme/android/R$layout;->campus_toolbar_activity:I
+ 
+     invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali base/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali	2026-05-11 11:55:18.111535948 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali	2026-05-11 11:26:59.635177433 -0400
+@@ -470,6 +470,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 0
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_campusdeals
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 61
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/profile/ProfileFragment.smali base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali
+--- base_clean/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-11 11:55:09.027535951 -0400
++++ base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-11 11:20:44.819177576 -0400
+@@ -6283,6 +6283,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mFacebookButton:Landroid/widget/Button;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 754
+     sget v0, Lcom/groupme/android/R$id;->sharing_switch:I
+ 
+@@ -6404,6 +6408,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestsNewNudge:Landroid/widget/ImageView;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 765
+     sget v0, Lcom/groupme/android/R$id;->interests_count:I
+ 
+@@ -6415,6 +6423,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestCount:Landroid/widget/TextView;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 766
+     sget v0, Lcom/groupme/android/R$id;->add_more_interests:I
+ 
+@@ -6426,6 +6438,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestAddMore:Landroid/widget/TextView;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 767
+     sget v0, Lcom/groupme/android/R$id;->layout_add_interests:I
+ 
+@@ -6435,6 +6451,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestsCTALayout:Landroid/view/View;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 768
+     sget v0, Lcom/groupme/android/R$id;->cta_add_interests:I
+ 
+@@ -6446,6 +6466,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestCTAButton:Landroid/widget/Button;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 769
+     sget v0, Lcom/groupme/android/R$id;->interests_recycler_view:I
+ 
+@@ -6457,6 +6481,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestsRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 770
+     new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
+ 
+@@ -6505,6 +6533,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mSongHeaderContainer:Landroid/widget/RelativeLayout;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 775
+     sget v0, Lcom/groupme/android/R$id;->song_new_nudge:I
+ 
+@@ -6527,6 +6559,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mAnthemCTALayout:Landroid/widget/RelativeLayout;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 777
+     sget v0, Lcom/groupme/android/R$id;->spotify_preview_widget:I
+ 
+@@ -6538,6 +6574,10 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mSpotifyPreview:Lcom/groupme/android/widget/SpotifyPreview;
+ 
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
+     .line 778
+     new-instance v1, Lcom/groupme/android/profile/ProfileFragment$$ExternalSyntheticLambda3;
+ 
+@@ -6618,6 +6658,74 @@
+     .line 801
+     invoke-virtual {p0}, Lcom/groupme/android/profile/ProfileFragment;->fetchDirectoryId()V
+ 
++    const/16 v3, 0x8
++
++    sget v0, Lcom/groupme/android/R$id;->section_socials:I
++
++    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
++
++    move-result-object v0
++
++    if-eqz v0, :hide_a_end
++
++    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
++
++    :hide_a_end
++    sget v0, Lcom/groupme/android/R$id;->interests_header_container:I
++
++    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
++
++    move-result-object v0
++
++    if-eqz v0, :hide_b_end
++
++    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
++
++    :hide_b_end
++    sget v0, Lcom/groupme/android/R$id;->interests_label:I
++
++    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
++
++    move-result-object v0
++
++    if-eqz v0, :hide_c_end
++
++    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
++
++    :hide_c_end
++    sget v0, Lcom/groupme/android/R$id;->song_label:I
++
++    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
++
++    move-result-object v0
++
++    if-eqz v0, :hide_d_end
++
++    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
++
++    :hide_d_end
++    sget v0, Lcom/groupme/android/R$id;->my_anthem:I
++
++    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
++
++    move-result-object v0
++
++    if-eqz v0, :hide_e_end
++
++    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
++
++    :hide_e_end
++    sget v0, Lcom/groupme/android/R$id;->layout_add_anthem:I
++
++    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
++
++    move-result-object v0
++
++    if-eqz v0, :hide_f_end
++
++    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
++
++    :hide_f_end
+     return-void
+ .end method
+ 
+@@ -7788,7 +7896,10 @@
+ .method public final setInterestsVisibility(Z)V
+     .locals 4
+ 
++    return-void
++
+     .line 1848
++    :gone_setinterestsvis
+     iget-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestsNewNudge:Landroid/widget/ImageView;
+ 
+     invoke-static {}, Lcom/groupme/ecs/ECSManager;->get()Lcom/groupme/ecs/ECSManager;
+@@ -8414,7 +8525,10 @@
+ .method public final setSpotifyPreview()V
+     .locals 2
+ 
++    return-void
++
+     .line 1870
++    :gone_setspotify
+     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+ 
+     move-result-object v0
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali base/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali
+--- base_clean/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali	2026-05-11 11:55:09.071535951 -0400
++++ base/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali	2026-05-11 11:03:16.019177976 -0400
+@@ -37,7 +37,12 @@
+     .line 19
+     invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 20
++    :gone_basicwebview
+     sget p1, Lcom/groupme/android/R$layout;->activity_basic_webview:I
+ 
+     invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/FeedbackFragment.smali base/smali_classes6/com/groupme/android/support/FeedbackFragment.smali
+--- base_clean/smali_classes6/com/groupme/android/support/FeedbackFragment.smali	2026-05-11 11:55:09.235535951 -0400
++++ base/smali_classes6/com/groupme/android/support/FeedbackFragment.smali	2026-05-11 11:27:19.191177425 -0400
+@@ -273,6 +273,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 0
+ 
++    const/4 p0, 0x0
++
++    return-object p0
++
++    :gone_feedback
+     .line 76
+     sget p0, Lcom/groupme/android/R$layout;->fragment_give_feedback:I
+ 
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali base/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali
+--- base_clean/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali	2026-05-11 11:55:09.235535951 -0400
++++ base/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali	2026-05-11 11:25:36.471177464 -0400
+@@ -30,7 +30,12 @@
+     .line 20
+     invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 21
++    :gone_helpandfeedback
+     sget v0, Lcom/groupme/android/R$layout;->simple_toolbar_activity:I
+ 
+     invoke-virtual {p0, v0}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali base/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali
+--- base_clean/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali	2026-05-11 11:55:09.311535951 -0400
++++ base/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali	2026-05-11 11:27:09.055177429 -0400
+@@ -480,6 +480,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 0
+ 
++    const/4 p0, 0x0
++
++    return-object p0
++
++    :gone_helpfeedback
+     .line 56
+     sget p0, Lcom/groupme/android/R$layout;->fragment_help_and_feedback:I
+ 
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali base/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali
+--- base_clean/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali	2026-05-11 11:55:09.295535951 -0400
++++ base/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali	2026-05-11 11:03:16.035177976 -0400
+@@ -224,7 +224,12 @@
+     .line 41
+     invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 42
++    :gone_nps
+     sget p1, Lcom/groupme/android/R$layout;->activity_nps_survey:I
+ 
+     invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali base/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali
+--- base_clean/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali	2026-05-11 11:55:09.291535951 -0400
++++ base/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali	2026-05-11 11:03:16.047177976 -0400
+@@ -178,7 +178,12 @@
+     .line 61
+     invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 62
++    :gone_reportabuse
+     sget p1, Lcom/groupme/android/R$layout;->activity_report_abuse:I
+ 
+     invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali
+--- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali	2026-05-11 11:55:17.507535948 -0400
++++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali	2026-05-11 11:26:40.855177440 -0400
+@@ -1036,6 +1036,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 0
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_vsbottomsheet
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 177
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali
+--- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali	2026-05-11 11:55:17.523535948 -0400
++++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali	2026-05-11 11:26:29.903177444 -0400
+@@ -830,6 +830,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 0
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_vsfragment
+     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+ 
+     .line 98
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali
+--- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali	2026-05-11 11:55:17.515535948 -0400
++++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali	2026-05-11 11:03:16.063177976 -0400
+@@ -242,7 +242,12 @@
+     .line 21
+     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 22
++    :gone_visualsearch
+     invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
+ 
+     move-result-object p1
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali base/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali
+--- base_clean/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali	2026-05-11 11:55:17.699535948 -0400
++++ base/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali	2026-05-11 11:26:11.703177451 -0400
+@@ -406,7 +406,12 @@
+     :cond_0
+     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 60
++    :gone_msfeedback
+     sget-object v0, Lcom/microsoft/office/feedback/inapp/InAppFeedback;->init:Lcom/microsoft/office/feedback/inapp/InAppFeedbackInit;
+ 
+     if-nez v0, :cond_1
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali base/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali
+--- base_clean/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali	2026-05-11 11:55:17.707535948 -0400
++++ base/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali	2026-05-11 11:27:34.387177419 -0400
+@@ -938,6 +938,11 @@
+ .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+     .locals 1
+ 
++    const/4 p1, 0x0
++
++    return-object p1
++
++    :gone_webinterface
+     .line 93
+     iget-object v0, p0, Lcom/microsoft/office/feedback/inapp/WebInterfaceFragment;->feedbackInitOptions:Lcom/microsoft/feedback/types/FeedbackInitOptions;
+ 
