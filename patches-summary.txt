@@ -3,3 +3,4 @@
 - Link previews in chat disabled (URLs stay tappable)
 - Facebook, Spotify, and Interests sections removed from Profile
 - Help Center row and Profile glow-up banner removed from More tab
+- Camera (OneCameraActivity) fixed: falls back to internal getFilesDir() when getExternalFilesDir() returns null instead of crashing on /OneCameraClips at root

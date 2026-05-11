@@ -118,6 +118,23 @@ Section labels and dividers go too — not just the inner controls.
 | "Help Center" row | `more/MoreTabFragment.smali` | The block adding `MoreOptionsItem(HELP_FEEDBACK, ctx)` to `mMoreOptions` is deleted |
 | "Profile glow-up" nudge banner | `more/MoreTabFragment.smali` | The VISIBLE branch (`const/4 v2, 0x0`) before `setVisibility` is rewritten to `const/16 v2, 0x8`, so the banner is GONE regardless of dismiss state or profile completeness |
 
+### 6. OneCamera (camera icon) external-storage fallback
+
+Upstream bug in the bundled flipgrid camera SDK: when
+`Context.getExternalFilesDir(DIRECTORY_MOVIES)` returns `null` (e.g. after a
+recent `pm uninstall` left `/storage/emulated/0/Android/data/<pkg>/` missing
+and the OS didn't auto-recreate it), the SDK builds `new File(null,
+"OneCameraClips")` → resolves to absolute `/OneCameraClips` → `mkdirs()`
+throws `IllegalArgumentException` and `OneCameraActivity.onCreate` crashes
+during `FragmentContainerView` inflate.
+
+| File | Edit |
+|------|------|
+| `com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali` | In `getOneCameraStore`, bump locals to 3 to keep the Context in `v2`. After `getExternalFilesDir(...)` returns into `p0`, `if-nez p0, :cond_ext_ok` skips fallback; otherwise call `Context.getFilesDir()` and use that. Either way construct `new File(<dir>, "OneCameraClips")` and continue. |
+
+Clips land at `files/OneCameraClips/` under the app's internal storage
+whenever external is unavailable.
+
 ## What's untouched (intentional)
 
 - **`ChatActivity` / `ChatFragment`** still renders messages. Killing them

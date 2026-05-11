@@ -546,3 +546,40 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/co
      .line 93
      iget-object v0, p0, Lcom/microsoft/office/feedback/inapp/WebInterfaceFragment;->feedbackInitOptions:Lcom/microsoft/feedback/types/FeedbackInitOptions;
  
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali base/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali
+--- base_clean/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali	2026-05-11 14:55:18.332366692 -0400
++++ base/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali	2026-05-11 15:01:32.104366550 -0400
+@@ -38,12 +38,12 @@
+ .end method
+ 
+ .method public static getOneCameraStore(Lcom/flipgrid/camera/easyintegration/helper/CameraSessionInteraction;)Lcom/flipgrid/camera/onecamera/persistence/store/DefaultOneCameraStore;
+-    .locals 2
++    .locals 3
+ 
+     .line 42
+     invoke-interface {p0}, Lcom/flipgrid/camera/easyintegration/helper/CameraSessionInteraction;->getCameraContext()Landroid/content/Context;
+ 
+-    move-result-object p0
++    move-result-object v2
+ 
+     .line 44
+     new-instance v0, Ljava/io/File;
+@@ -51,10 +51,17 @@
+     .line 45
+     sget-object v1, Landroid/os/Environment;->DIRECTORY_MOVIES:Ljava/lang/String;
+ 
+-    invoke-virtual {p0, v1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
++    invoke-virtual {v2, v1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
++
++    move-result-object p0
++
++    if-nez p0, :cond_ext_ok
++
++    invoke-virtual {v2}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+ 
+     move-result-object p0
+ 
++    :cond_ext_ok
+     .line 46
+     const-string v1, "OneCameraClips"
+ 
