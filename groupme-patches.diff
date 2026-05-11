@@ -1,6 +1,6 @@
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes3/com/facebook/CustomTabActivity.smali base/smali_classes3/com/facebook/CustomTabActivity.smali
---- base_clean/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-11 11:55:11.787535950 -0400
-+++ base/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-11 11:08:08.451177864 -0400
+--- base_clean/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-11 14:55:12.676366695 -0400
++++ base/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-11 15:14:01.297536993 -0400
 @@ -208,7 +208,12 @@
      .line 26
      invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
@@ -15,8 +15,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes3/co
  
      const-class v0, Lcom/facebook/CustomTabMainActivity;
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes3/com/facebook/CustomTabMainActivity.smali base/smali_classes3/com/facebook/CustomTabMainActivity.smali
---- base_clean/smali_classes3/com/facebook/CustomTabMainActivity.smali	2026-05-11 11:55:11.803535950 -0400
-+++ base/smali_classes3/com/facebook/CustomTabMainActivity.smali	2026-05-11 11:08:21.967177859 -0400
+--- base_clean/smali_classes3/com/facebook/CustomTabMainActivity.smali	2026-05-11 14:55:12.676366695 -0400
++++ base/smali_classes3/com/facebook/CustomTabMainActivity.smali	2026-05-11 15:14:01.297536993 -0400
 @@ -343,7 +343,12 @@
      .line 31
      invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
@@ -30,9 +30,46 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes3/co
      sget-object v0, Lcom/facebook/CustomTabActivity;->CUSTOM_TAB_REDIRECT_ACTION:Ljava/lang/String;
  
      invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali base/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali
+--- base_clean/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali	2026-05-11 14:55:18.332366692 -0400
++++ base/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali	2026-05-11 15:14:01.309536993 -0400
+@@ -38,12 +38,12 @@
+ .end method
+ 
+ .method public static getOneCameraStore(Lcom/flipgrid/camera/easyintegration/helper/CameraSessionInteraction;)Lcom/flipgrid/camera/onecamera/persistence/store/DefaultOneCameraStore;
+-    .locals 2
++    .locals 3
+ 
+     .line 42
+     invoke-interface {p0}, Lcom/flipgrid/camera/easyintegration/helper/CameraSessionInteraction;->getCameraContext()Landroid/content/Context;
+ 
+-    move-result-object p0
++    move-result-object v2
+ 
+     .line 44
+     new-instance v0, Ljava/io/File;
+@@ -51,10 +51,17 @@
+     .line 45
+     sget-object v1, Landroid/os/Environment;->DIRECTORY_MOVIES:Ljava/lang/String;
+ 
+-    invoke-virtual {p0, v1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
++    invoke-virtual {v2, v1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
++
++    move-result-object p0
++
++    if-nez p0, :cond_ext_ok
++
++    invoke-virtual {v2}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+ 
+     move-result-object p0
+ 
++    :cond_ext_ok
+     .line 46
+     const-string v1, "OneCameraClips"
+ 
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes4/com/groupme/android/more/MoreTabFragment.smali base/smali_classes4/com/groupme/android/more/MoreTabFragment.smali
---- base_clean/smali_classes4/com/groupme/android/more/MoreTabFragment.smali	2026-05-11 11:55:15.395535949 -0400
-+++ base/smali_classes4/com/groupme/android/more/MoreTabFragment.smali	2026-05-11 11:24:04.419177499 -0400
+--- base_clean/smali_classes4/com/groupme/android/more/MoreTabFragment.smali	2026-05-11 14:55:17.784366693 -0400
++++ base/smali_classes4/com/groupme/android/more/MoreTabFragment.smali	2026-05-11 15:14:01.297536993 -0400
 @@ -430,21 +430,6 @@
  
      invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -65,8 +102,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes4/co
      goto :goto_0
  
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/HomeActivity.smali base/smali_classes5/com/groupme/android/HomeActivity.smali
---- base_clean/smali_classes5/com/groupme/android/HomeActivity.smali	2026-05-11 11:55:15.275535949 -0400
-+++ base/smali_classes5/com/groupme/android/HomeActivity.smali	2026-05-11 11:03:37.667177967 -0400
+--- base_clean/smali_classes5/com/groupme/android/HomeActivity.smali	2026-05-11 14:55:16.788366693 -0400
++++ base/smali_classes5/com/groupme/android/HomeActivity.smali	2026-05-11 15:14:01.301536993 -0400
 @@ -2683,11 +2683,6 @@
  .method public final loadDiscoverFragment(Ljava/lang/String;Ljava/lang/String;Lcom/groupme/android/group/directory/OpenDirectoryEntryPoint;I)V
      .locals 9
@@ -89,8 +126,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/co
  
      .line 762
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali
---- base_clean/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-11 11:55:16.903535948 -0400
-+++ base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-11 11:30:45.315177346 -0400
+--- base_clean/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-11 14:55:18.660366692 -0400
++++ base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-11 15:14:01.301536993 -0400
 @@ -127,6 +127,13 @@
  
      move-object/from16 v0, p1
@@ -106,8 +143,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/co
  
      invoke-virtual/range {p2 .. p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali base/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali
---- base_clean/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali	2026-05-11 11:55:16.907535948 -0400
-+++ base/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali	2026-05-11 11:35:00.359177249 -0400
+--- base_clean/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali	2026-05-11 14:55:18.660366692 -0400
++++ base/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali	2026-05-11 15:14:01.301536993 -0400
 @@ -730,6 +730,13 @@
  
      move-object/from16 v5, p3
@@ -123,8 +160,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/co
      invoke-virtual {p1}, Lcom/groupme/model/Message;->getConversationId()Ljava/lang/String;
  
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali base/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali
---- base_clean/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali	2026-05-11 11:55:17.319535948 -0400
-+++ base/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali	2026-05-11 11:03:15.999177976 -0400
+--- base_clean/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali	2026-05-11 14:55:19.528366692 -0400
++++ base/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali	2026-05-11 15:14:01.301536993 -0400
 @@ -219,6 +219,8 @@
  
      if-eqz p2, :cond_5
@@ -135,8 +172,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/co
      new-instance p2, Landroid/os/Bundle;
  
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali
---- base_clean/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-11 11:55:18.095535948 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-11 11:25:44.927177461 -0400
+--- base_clean/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-11 14:55:20.756366691 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-11 15:14:01.301536993 -0400
 @@ -113,7 +113,12 @@
      .line 37
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -151,8 +188,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/co
  
      invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali base/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali
---- base_clean/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali	2026-05-11 11:55:18.111535948 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali	2026-05-11 11:26:59.635177433 -0400
+--- base_clean/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali	2026-05-11 14:55:20.760366691 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali	2026-05-11 15:14:01.301536993 -0400
 @@ -470,6 +470,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -165,9 +202,45 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/co
      invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
  
      .line 61
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes5/com/groupme/android/login/LoginFragment.smali base/smali_classes5/com/groupme/android/login/LoginFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/login/LoginFragment.smali	2026-05-11 14:55:21.524366691 -0400
++++ base/smali_classes5/com/groupme/android/login/LoginFragment.smali	2026-05-11 15:14:47.389536975 -0400
+@@ -956,6 +956,10 @@
+ 
+     check-cast v1, Landroid/widget/FrameLayout;
+ 
++    const/16 v4, 0x8
++
++    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
++
+     .line 117
+     sget v2, Lcom/groupme/android/R$id;->email_or_phone_button:I
+ 
+@@ -977,6 +981,10 @@
+ 
+     move-result-object v3
+ 
++    const/16 v4, 0x8
++
++    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
++
+     .line 125
+     new-instance v4, Lcom/groupme/android/login/LoginFragment$$ExternalSyntheticLambda2;
+ 
+@@ -991,6 +999,10 @@
+ 
+     move-result-object p1
+ 
++    const/16 v4, 0x8
++
++    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
++
+     .line 132
+     new-instance v4, Lcom/groupme/android/login/LoginFragment$$ExternalSyntheticLambda3;
+ 
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/profile/ProfileFragment.smali base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali
---- base_clean/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-11 11:55:09.027535951 -0400
-+++ base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-11 11:20:44.819177576 -0400
+--- base_clean/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-11 14:55:08.472366696 -0400
++++ base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -6283,6 +6283,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mFacebookButton:Landroid/widget/Button;
@@ -376,8 +449,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/co
  
      move-result-object v0
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali base/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali
---- base_clean/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali	2026-05-11 11:55:09.071535951 -0400
-+++ base/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali	2026-05-11 11:03:16.019177976 -0400
+--- base_clean/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali	2026-05-11 14:55:08.492366696 -0400
++++ base/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -37,7 +37,12 @@
      .line 19
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -392,8 +465,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/co
  
      invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/FeedbackFragment.smali base/smali_classes6/com/groupme/android/support/FeedbackFragment.smali
---- base_clean/smali_classes6/com/groupme/android/support/FeedbackFragment.smali	2026-05-11 11:55:09.235535951 -0400
-+++ base/smali_classes6/com/groupme/android/support/FeedbackFragment.smali	2026-05-11 11:27:19.191177425 -0400
+--- base_clean/smali_classes6/com/groupme/android/support/FeedbackFragment.smali	2026-05-11 14:55:08.780366696 -0400
++++ base/smali_classes6/com/groupme/android/support/FeedbackFragment.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -273,6 +273,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -407,8 +480,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/co
      sget p0, Lcom/groupme/android/R$layout;->fragment_give_feedback:I
  
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali base/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali
---- base_clean/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali	2026-05-11 11:55:09.235535951 -0400
-+++ base/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali	2026-05-11 11:25:36.471177464 -0400
+--- base_clean/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali	2026-05-11 14:55:08.860366696 -0400
++++ base/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -30,7 +30,12 @@
      .line 20
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -423,8 +496,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/co
  
      invoke-virtual {p0, v0}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali base/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali
---- base_clean/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali	2026-05-11 11:55:09.311535951 -0400
-+++ base/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali	2026-05-11 11:27:09.055177429 -0400
+--- base_clean/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali	2026-05-11 14:55:08.804366696 -0400
++++ base/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -480,6 +480,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -438,8 +511,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/co
      sget p0, Lcom/groupme/android/R$layout;->fragment_help_and_feedback:I
  
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali base/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali
---- base_clean/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali	2026-05-11 11:55:09.295535951 -0400
-+++ base/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali	2026-05-11 11:03:16.035177976 -0400
+--- base_clean/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali	2026-05-11 14:55:08.856366696 -0400
++++ base/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -224,7 +224,12 @@
      .line 41
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -454,8 +527,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/co
  
      invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali base/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali
---- base_clean/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali	2026-05-11 11:55:09.291535951 -0400
-+++ base/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali	2026-05-11 11:03:16.047177976 -0400
+--- base_clean/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali	2026-05-11 14:55:08.840366696 -0400
++++ base/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -178,7 +178,12 @@
      .line 61
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -469,9 +542,50 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/co
      sget p1, Lcom/groupme/android/R$layout;->activity_report_abuse:I
  
      invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
+diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes6/com/groupme/android/welcome/create_account/CreateAccountPickerFragment.smali base/smali_classes6/com/groupme/android/welcome/create_account/CreateAccountPickerFragment.smali
+--- base_clean/smali_classes6/com/groupme/android/welcome/create_account/CreateAccountPickerFragment.smali	2026-05-11 14:55:10.484366695 -0400
++++ base/smali_classes6/com/groupme/android/welcome/create_account/CreateAccountPickerFragment.smali	2026-05-11 15:14:13.137536988 -0400
+@@ -913,6 +913,10 @@
+ 
+     move-result-object v1
+ 
++    const/16 v6, 0x8
++
++    invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
++
+     .line 105
+     sget v2, Lcom/groupme/android/R$id;->google_sign_in_button:I
+ 
+@@ -920,6 +924,8 @@
+ 
+     move-result-object v2
+ 
++    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
++
+     .line 106
+     sget v3, Lcom/groupme/android/R$id;->create_account_separator:I
+ 
+@@ -927,6 +933,8 @@
+ 
+     move-result-object v3
+ 
++    invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
++
+     .line 107
+     sget v4, Lcom/groupme/android/R$id;->frame_msft_signin:I
+ 
+@@ -934,6 +942,8 @@
+ 
+     move-result-object v4
+ 
++    invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
++
+     check-cast v4, Landroid/widget/FrameLayout;
+ 
+     .line 109
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali
---- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali	2026-05-11 11:55:17.507535948 -0400
-+++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali	2026-05-11 11:26:40.855177440 -0400
+--- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali	2026-05-11 14:55:20.932366691 -0400
++++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -1036,6 +1036,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -485,8 +599,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/co
  
      .line 177
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali
---- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali	2026-05-11 11:55:17.523535948 -0400
-+++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali	2026-05-11 11:26:29.903177444 -0400
+--- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali	2026-05-11 14:55:20.948366691 -0400
++++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -830,6 +830,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -500,8 +614,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/co
  
      .line 98
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali
---- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali	2026-05-11 11:55:17.515535948 -0400
-+++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali	2026-05-11 11:03:16.063177976 -0400
+--- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali	2026-05-11 14:55:20.964366691 -0400
++++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali	2026-05-11 15:14:01.305536993 -0400
 @@ -242,7 +242,12 @@
      .line 21
      invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
@@ -516,8 +630,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/co
  
      move-result-object p1
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali base/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali
---- base_clean/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali	2026-05-11 11:55:17.699535948 -0400
-+++ base/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali	2026-05-11 11:26:11.703177451 -0400
+--- base_clean/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali	2026-05-11 14:55:21.240366691 -0400
++++ base/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali	2026-05-11 15:14:01.309536993 -0400
 @@ -406,7 +406,12 @@
      :cond_0
      invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
@@ -532,8 +646,8 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/co
  
      if-nez v0, :cond_1
 diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali base/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali
---- base_clean/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali	2026-05-11 11:55:17.707535948 -0400
-+++ base/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali	2026-05-11 11:27:34.387177419 -0400
+--- base_clean/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali	2026-05-11 14:55:21.280366691 -0400
++++ base/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali	2026-05-11 15:14:01.309536993 -0400
 @@ -938,6 +938,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 1
@@ -545,41 +659,4 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/co
 +    :gone_webinterface
      .line 93
      iget-object v0, p0, Lcom/microsoft/office/feedback/inapp/WebInterfaceFragment;->feedbackInitOptions:Lcom/microsoft/feedback/types/FeedbackInitOptions;
- 
-diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali base/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali
---- base_clean/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali	2026-05-11 14:55:18.332366692 -0400
-+++ base/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali	2026-05-11 15:01:32.104366550 -0400
-@@ -38,12 +38,12 @@
- .end method
- 
- .method public static getOneCameraStore(Lcom/flipgrid/camera/easyintegration/helper/CameraSessionInteraction;)Lcom/flipgrid/camera/onecamera/persistence/store/DefaultOneCameraStore;
--    .locals 2
-+    .locals 3
- 
-     .line 42
-     invoke-interface {p0}, Lcom/flipgrid/camera/easyintegration/helper/CameraSessionInteraction;->getCameraContext()Landroid/content/Context;
- 
--    move-result-object p0
-+    move-result-object v2
- 
-     .line 44
-     new-instance v0, Ljava/io/File;
-@@ -51,10 +51,17 @@
-     .line 45
-     sget-object v1, Landroid/os/Environment;->DIRECTORY_MOVIES:Ljava/lang/String;
- 
--    invoke-virtual {p0, v1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
-+    invoke-virtual {v2, v1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
-+
-+    move-result-object p0
-+
-+    if-nez p0, :cond_ext_ok
-+
-+    invoke-virtual {v2}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
- 
-     move-result-object p0
- 
-+    :cond_ext_ok
-     .line 46
-     const-string v1, "OneCameraClips"
  

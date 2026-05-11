@@ -135,6 +135,19 @@ during `FragmentContainerView` inflate.
 Clips land at `files/OneCameraClips/` under the app's internal storage
 whenever external is unavailable.
 
+### 7. Sign-in tiles cleanup
+
+Re-signing the APK changes its SHA-1, so OAuth-based sign-ins (Facebook,
+Google, Microsoft) fail server-side because Microsoft's Firebase project
+doesn't know our debug-key SHA-1. Hide those tiles to avoid dead-end taps.
+
+| File | Edit |
+|------|------|
+| `welcome/create_account/CreateAccountPickerFragment.smali` | After each `findViewById` for `button_facebook`, `google_sign_in_button`, `create_account_separator`, `frame_msft_signin`: inject `setVisibility(GONE)` |
+| `login/LoginFragment.smali` | Same pattern for `frame_msft_signin`, `button_facebook`, `google_sign_in_button` |
+
+Email + phone-number flows are untouched.
+
 ## What's untouched (intentional)
 
 - **`ChatActivity` / `ChatFragment`** still renders messages. Killing them
