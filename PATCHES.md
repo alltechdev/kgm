@@ -18,8 +18,8 @@ Patched APK strips:
 14. The **DMs** filter pill is now labeled **People** (text override at bind; internal id stays `dms` so the ECS allowlist still matches).
 15. The **New Chat** screen is renamed to **New Message**, and the **Event Group** + **Vanishing Group** rows are removed. Remaining rows ("Create Group", "Create Announcement Group") keep their title only — icon and description are hidden.
 16. The **bottom navigation bar** is collapsed to height 0 (kept `VISIBLE` so the FAB's CoordinatorLayout anchor still resolves at the bottom of the screen). The **More** tab is reachable via a **Settings** entry in a new 3-dot overflow in the chat-list toolbar — taps fire `setSelectedItemId(bottom_more)` so back-press transitions back through the existing nav listener.
-17. The **filter pills row** is removed from the chat list and replaced by a **filter funnel** icon in the toolbar that pops a SubMenu with `All / Unread / People / Groups`.
-18. The compose **FAB** is lifted `80dp` to clear the space the bottom nav used to occupy.
+17. The **filter pills row** is removed from the chat list and replaced by a **filter funnel** icon in the toolbar that pops a SubMenu with `All / Unread / People / Groups`. Each entry posts the matching `Filter` object to `ConversationViewModel.getChatsFilter()` via a new `ChatFilterAdapter.kgmSelectFilterById` helper — the same LiveData path the pill clicks used.
+18. The compose **FAB** is replaced by a **New Message** action icon in the toolbar (taps `HomeActivity.launchNewChatActivity`). The FAB itself is suppressed in place — kept in the CoordinatorLayout so the `fab_menu_anchor` anchor still resolves, but its `LayoutParams` are zeroed and `GradientActionButton` overrides `setVisibility` / `show()` / `show(OnVisibilityChangedListener)` to keep `FAB.show()` from un-hiding it.
 
 Chat send/receive, group management, image attachments, contacts, calendar — all untouched.
 

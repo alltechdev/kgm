@@ -18,7 +18,8 @@
 - "Create Group" and "Create Announcement Group" entries keep title only - icon ImageButton and description TextView hidden in bind
 - Bottom navigation bar collapsed to height 0 (kept visible so FAB's CoordinatorLayout anchor still resolves at the bottom of the screen)
 - Settings entry added to a 3-dot overflow in the top-right of the chat list - taps fire mBottomNavigationView.setSelectedItemId(R.id.bottom_more), which routes through the existing OnItemSelectedListener -> loadMoreFragment; back-press then calls setSelectedItemId(bottom_chat) which transitions back to the chat list
-- Filter funnel icon added to chat list toolbar next to search; opens a SubMenu with All / Unread / People / Groups - each item invokes ChatFilterAdapter.updateSelectedFilter
+- Filter funnel icon added to chat list toolbar next to search; opens a SubMenu with All / Unread / People / Groups - each item invokes ChatFilterAdapter.kgmSelectFilterById which posts the matching Filter object to ConversationViewModel.getChatsFilter() (the same path the pills used). Plain updateSelectedFilter only flipped the adapter's visual selection - the data filter requires the LiveData post.
 - Filter pills row removed from chat list (both addHeaderView call sites for mFilterContainer)
-- Floating-action-button (compose) lifted 80dp via MarginLayoutParams.bottomMargin so it sits above where the bottom nav used to be
-- Two static helpers added to HomeActivity (kgmCollapseView, kgmLiftFab) so the height/margin tweaks live in 4-bit register methods - earlier inline edits in onCreate were rejected by the verifier
+- "New Message" action icon added to the chat list toolbar (ic_fluent_compose_24_filled); taps call HomeActivity.launchNewChatActivity (same entry point the FAB used)
+- Floating-action-button (compose) suppressed: kept in the CoordinatorLayout so fab_menu_anchor's layout_anchor still resolves, but kgmLiftFab zeros its LayoutParams width and height + setVisibility(GONE), and GradientActionButton overrides setVisibility / show() / show(OnVisibilityChangedListener) as no-ops so internal FAB.show() calls (which bypass dynamic dispatch via super.setVisibility) can't re-show it
+- Two static helpers added to HomeActivity (kgmCollapseView, kgmLiftFab) so the height/visibility tweaks live in 4-bit register methods - earlier inline edits in onCreate tripped the verifier
