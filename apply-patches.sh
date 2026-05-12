@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Apply GroupMe 15.71.4 patches to a fresh apktool decompile.
+# Apply GroupMe 15.71.4 -> RetroGM patches to a fresh apktool decompile.
 #
 # Usage:
 #   apktool d base.apk -o base -r
 #   ./apply-patches.sh base
 #
-# Pre-reqs in PATH: patch
+# Pre-reqs in PATH: patch, python3
 set -euo pipefail
 
 target="${1:-base}"
@@ -22,11 +22,21 @@ if [ ! -f "$diff_file" ]; then
   exit 1
 fi
 
-cd "$target"
-
-# Strip the leading "base_clean/" and "base/" path components from the diff
-# (-p1 strips one component) and apply with up to 5 lines of fuzz for resilience
-# against minor line shifts in adjacent GroupMe versions.
+# 1) Smali / text patches via unified diff (relative path-component strip = -p1
+#    because the diff prefixes paths with base_clean/ and base/).
 echo ">> applying groupme-patches.diff to $target/"
-patch -p1 -F 5 --no-backup-if-mismatch --reject-file=- < "$diff_file"
+( cd "$target" && patch -p1 -F 5 --no-backup-if-mismatch --reject-file=- < "$diff_file" )
+
+# 2) Binary edits the diff format can't carry. Each script takes the target
+#    base dir as its only argument and hex-edits a compiled AXML or
+#    resources.arsc in place.
+echo ">> rebranding launcher: black background"
+python3 "$script_dir/recolor_icon.py" "$target"
+echo ">> rebranding launcher: shrink foreground glyph"
+python3 "$script_dir/shrink_icon.py" "$target"
+echo ">> rebranding launcher: recenter foreground glyph"
+python3 "$script_dir/center_icon.py" "$target"
+echo ">> rebranding app label to RetroGM"
+python3 "$script_dir/rename_app.py" "$target"
+
 echo ">> done"

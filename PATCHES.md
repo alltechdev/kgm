@@ -43,8 +43,12 @@ Chat send/receive, group management, image attachments, contacts — all untouch
 | `base.apk` | Unmodified GroupMe 15.71.4 (versionCode 261310204) — input |
 | `base/` | Patched apktool decompile (`apktool d -r`, no resources) |
 | `base-signed.apk` | Final aligned + debug-signed output |
-| `groupme-patches.diff` | Unified diff against a clean decompile |
-| `apply-patches.sh` | Driver: runs `patch -p1 -F 5` |
+| `groupme-patches.diff` | Unified diff against a clean decompile (`--exclude=build`) |
+| `apply-patches.sh` | Driver: runs `patch -p1 -F 5`, then the binary-edit helpers |
+| `recolor_icon.py` | Hex-edits `res/l_b.xml` adaptive-icon gradient stops to solid `#000000` |
+| `shrink_icon.py` | Hex-swaps the foreground vector `viewportWidth`/`Height` 108.0 → 144.0 |
+| `center_icon.py` | Shifts the foreground path's four `M`/`m` anchors by `(+18,+18)` to recenter |
+| `rename_app.py` | Hex-replaces every UTF-8 `"GroupMe"` in `resources.arsc` with `"RetroGM"` (same length) |
 
 ## Rebuild from this repo
 
