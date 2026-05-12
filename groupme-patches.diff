@@ -503,9 +503,57 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      invoke-virtual {p0, p6}, Landroidx/core/content/pm/ShortcutInfoCompat$Builder;->setIcon(Landroidx/core/graphics/drawable/IconCompat;)Landroidx/core/content/pm/ShortcutInfoCompat$Builder;
  
      move-result-object p0
+diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali base/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali
+--- base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali	2026-05-11 14:55:17.784366693 -0400
++++ base/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali	2026-05-12 13:29:56.960148614 -0400
+@@ -9263,6 +9263,8 @@
+ 
+     move-result v0
+ 
++    const/4 v0, 0x0
++
+     const/4 v1, 0x0
+ 
+     if-eqz v0, :cond_0
+diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsListAdapter.smali base/smali_classes5/com/groupme/android/chat/ChatDetailsListAdapter.smali
+--- base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsListAdapter.smali	2026-05-11 14:55:17.664366693 -0400
++++ base/smali_classes5/com/groupme/android/chat/ChatDetailsListAdapter.smali	2026-05-12 13:32:12.460148562 -0400
+@@ -1107,6 +1107,32 @@
+ 
+     move-result-object v0
+ 
++    sget-object v1, Lcom/groupme/android/chat/ChatDetailsListAdapter$ChatDetailsItem;->Calendar:Lcom/groupme/android/chat/ChatDetailsListAdapter$ChatDetailsItem;
++
++    if-ne v0, v1, :kgm_cal_show
++
++    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
++
++    const/16 v2, 0x8
++
++    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
++
++    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
++
++    move-result-object v2
++
++    if-eqz v2, :kgm_cal_done
++
++    const/4 v3, 0x0
++
++    iput v3, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
++
++    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
++
++    :kgm_cal_done
++    return-void
++
++    :kgm_cal_show
+     .line 234
+     iget-object v1, p1, Lcom/groupme/android/chat/ChatDetailsListAdapter$ViewHolder;->chevronView:Landroid/widget/ImageView;
+ 
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatFragment.smali base/smali_classes5/com/groupme/android/chat/ChatFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ChatFragment.smali	2026-05-11 14:55:17.860366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/ChatFragment.smali	2026-05-12 12:29:17.326569406 -0400
++++ base/smali_classes5/com/groupme/android/chat/ChatFragment.smali	2026-05-12 13:29:04.440148634 -0400
 @@ -4196,6 +4196,8 @@
  
      .line 1197
@@ -524,6 +572,42 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      invoke-interface {v11, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
  
      .line 1207
+@@ -24028,6 +24032,35 @@
+ .method public final updateEmptyState()V
+     .locals 5
+ 
++    iget-object v0, p0, Lcom/groupme/android/chat/ChatFragment;->mEmptyStateTopicDMView:Landroid/view/View;
++
++    if-eqz v0, :kgm_es_skip0
++
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
++    :kgm_es_skip0
++    iget-object v0, p0, Lcom/groupme/android/chat/ChatFragment;->mEmptyStateGroupView:Landroid/view/View;
++
++    if-eqz v0, :kgm_es_skip1
++
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
++    :kgm_es_skip1
++    iget-object v0, p0, Lcom/groupme/android/chat/ChatFragment;->mEmptyStateCopilotView:Landroid/view/View;
++
++    if-eqz v0, :kgm_es_skip2
++
++    const/16 v1, 0x8
++
++    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
++
++    :kgm_es_skip2
++    return-void
++
+     .line 4707
+     iget-boolean v0, p0, Lcom/groupme/android/chat/ChatFragment;->mLoadedMessages:Z
+ 
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali base/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali	2026-05-11 14:55:17.876366693 -0400
 +++ base/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali	2026-05-11 21:34:54.082039367 -0400
