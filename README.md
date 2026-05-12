@@ -1,6 +1,6 @@
-# kgm
+# RetroGM
 
-Patches for GroupMe Android **15.71.4** (`versionCode 261310204`).
+GroupMe Android **15.71.4** (`versionCode 261310204`) rebranded as **RetroGM** — black launcher icon, Microsoft Teams calling stripped, Copilot stripped, Calendar + Events stripped, plus a long list of UI cleanups documented in [`PATCHES.md`](PATCHES.md).
 
 ## Build
 
@@ -13,12 +13,8 @@ apksigner sign --ks ~/.android/debug.keystore --ks-pass pass:android \
   --key-pass pass:android --out signed.apk aligned.apk
 ```
 
-## Install
+Pre-reqs: `apktool`, `patch`, `python3`, `zipalign`, `apksigner`.
 
-```bash
-pm install signed.apk
-```
-
-Signed APK is on the [latest release](https://github.com/alltechdev/kgm/releases/latest) if you don't want to build.
+Signed APK is on the [latest RetroGM pre-release](https://github.com/alltechdev/kgm/releases/tag/v0.1-pre) if you don't want to build.
 
 See [`PATCHES.md`](PATCHES.md) for what each patch does.
