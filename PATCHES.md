@@ -10,6 +10,16 @@ Patched APK strips:
 6. The OneCamera crash when `getExternalFilesDir()` returns `null` — falls back to internal storage.
 7. **Facebook / Google / Microsoft** sign-in tiles (dead on a re-signed APK anyway) — only email + phone OTP remain.
 8. **Copilot** end-to-end — Ask Copilot, study-tool flashcards/quizzes, in-chat @mention, group "Message Copilot" permission row.
+9. All **profile pictures / avatars** — every screen and every notification (large icon, Person icons, conversation shortcut icons).
+10. The **pinned-groups carousel** above the chat list.
+11. **Toolbar title** changed from "Chat" to "Messages" with `letterSpacing=0.02f` applied to every toolbar TextView child.
+12. The **Add contact** and **Share profile** icons in the chat-list toolbar (only Search kept).
+13. The **Share group** icon in the Group Members toolbar.
+14. The **DMs** filter pill is now labeled **People** (text override at bind; internal id stays `dms` so the ECS allowlist still matches).
+15. The **New Chat** screen is renamed to **New Message**, and the **Event Group** + **Vanishing Group** rows are removed. Remaining rows ("Create Group", "Create Announcement Group") keep their title only — icon and description are hidden.
+16. The **bottom navigation bar** is collapsed to height 0 (kept `VISIBLE` so the FAB's CoordinatorLayout anchor still resolves at the bottom of the screen). The **More** tab is reachable via a **Settings** entry in a new 3-dot overflow in the chat-list toolbar — taps fire `setSelectedItemId(bottom_more)` so back-press transitions back through the existing nav listener.
+17. The **filter pills row** is removed from the chat list and replaced by a **filter funnel** icon in the toolbar that pops a SubMenu with `All / Unread / People / Groups`.
+18. The compose **FAB** is lifted `80dp` to clear the space the bottom nav used to occupy.
 
 Chat send/receive, group management, image attachments, contacts, calendar — all untouched.
 

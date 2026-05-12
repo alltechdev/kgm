@@ -6,3 +6,19 @@
 - Camera (OneCameraActivity) fixed: falls back to internal getFilesDir() when getExternalFilesDir() returns null instead of crashing on /OneCameraClips at root
 - Facebook / Google / Microsoft sign-in buttons hidden (don't work on a debug-signed APK anyway) - only email + phone remain
 - Copilot stripped: CopilotV2State.isCopilotChatEnabled/isCopilotGroupMentionSettingUIEnabled forced false (cascades to all gated checks), and every Copilot Fragment/Activity (Ask Copilot, consent sheets, quiz/flashcard full-screens, leaderboard, chat selector, settings, group "Message Copilot" row) is killed at onCreateView/onCreate
+- Profile pictures / avatars hidden across every screen (GroupMe AvatarView + Fluent AvatarView/AvatarGroupView onAttachedToWindow zeros layout params + walks one parent up and hides containers whose resource name contains "avatar")
+- Notification avatars stripped: BaseNotification.setLargeIcon forced null, every Person.Builder.setIcon (Conversation/ConversationMention/SingleMessage) nulled, and conversation shortcut icons (SharingShortcutsManager) nulled so system-conversation notifications no longer pull sender avatars
+- Pinned-groups carousel removed from chat list (both addHeaderView call sites)
+- Toolbar title changed from "Chat" to "Messages" with letter spacing 0.02f applied to every TextView child of the toolbar
+- "Add contact" and "Share profile" icons removed from chat list toolbar (only Search kept)
+- Share icon removed from Group Members screen toolbar
+- "DMs" filter pill renamed to "People" (text override at ChatFilterAdapter$FilterViewHolder.bind; internal id stays "dms" so the ECS allowlist check still matches)
+- "New Chat" screen renamed to "New Message" (both setTitle sites in StartDMFragment)
+- "Create Event Group" and "Create Vanishing Group" entries removed from new-chat sheet (filtered from _startItems in StartNewChatItemsAdapter constructor)
+- "Create Group" and "Create Announcement Group" entries keep title only - icon ImageButton and description TextView hidden in bind
+- Bottom navigation bar collapsed to height 0 (kept visible so FAB's CoordinatorLayout anchor still resolves at the bottom of the screen)
+- Settings entry added to a 3-dot overflow in the top-right of the chat list - taps fire mBottomNavigationView.setSelectedItemId(R.id.bottom_more), which routes through the existing OnItemSelectedListener -> loadMoreFragment; back-press then calls setSelectedItemId(bottom_chat) which transitions back to the chat list
+- Filter funnel icon added to chat list toolbar next to search; opens a SubMenu with All / Unread / People / Groups - each item invokes ChatFilterAdapter.updateSelectedFilter
+- Filter pills row removed from chat list (both addHeaderView call sites for mFilterContainer)
+- Floating-action-button (compose) lifted 80dp via MarginLayoutParams.bottomMargin so it sits above where the bottom nav used to be
+- Two static helpers added to HomeActivity (kgmCollapseView, kgmLiftFab) so the height/margin tweaks live in 4-bit register methods - earlier inline edits in onCreate were rejected by the verifier
