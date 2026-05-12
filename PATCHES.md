@@ -42,6 +42,13 @@ Patched APK strips:
     * `ChatActivity.onCreate` hides every call surface via `InputBarFragment.kgmHide(view)` right after `findViewById` + `iput`: `mNotInCallMenu` (toolbar "not in call" container holding the Audio/Video icons), `mInCallMenu` (in-call container), `mReturnToCallView` (return-to-call banner), `mJoinCallView` (join-call banner), and the standalone `audio_call` / `video_call` buttons. Each gets `setVisibility(GONE)` + zero `LayoutParams.width`/`height` so no slot is reserved.
     * `ChatActivity.onCreateOptionsMenu` ends with `menu.removeItem(R.id.menu_item_call)` right before `super.onCreateOptionsMenu`, so the existing conditional `findItem`/`setIcon`/`setVisible` chains inside the method still run on a valid item (no NPE), but the item is gone from the menu the system actually displays.
     * `ConversationListItemViewHolder` constructor calls `kgmHide` on `callingActionButton` and `headSetIcon` so the inline call-row icons on the chat list are zero-sized invisible views.
+34. **Edit Profile screen cleanup.** In `ProfileFragment.onViewCreated`, immediately after each `findViewById` + `iput`, `InputBarFragment.kgmHide(view)` is called on:
+    * `mCTALayout` (`R.id.layout_join_campus`) — the "Join your campus" CTA.
+    * `mCampusSection` (`R.id.section_campus`) — the full campus block.
+    * `mPhotosContainer` (`R.id.photos_container`) — the Flexbox photo gallery grid.
+    * `mPhotosHeaderContainer` (`R.id.profile_photos_header_container`) — the "Photo gallery" header row.
+    * the `preview_profile` Button.
+    The avatar wrapper space at the top is collapsed by calling `getParent()` on `mAvatarView` and passing the wrapper `ViewGroup` to `kgmHide`, so the screen opens directly to the name / email / phone fields.
 
 Chat send/receive, group management, image attachments, contacts — all untouched.
 

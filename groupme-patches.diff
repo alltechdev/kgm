@@ -2432,8 +2432,46 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      move-result-object p0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/profile/ProfileFragment.smali base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali
 --- base_clean/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-11 14:55:08.472366696 -0400
-+++ base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-11 21:04:16.457947053 -0400
-@@ -6283,6 +6283,10 @@
++++ base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-12 15:38:51.170818080 -0400
+@@ -6142,6 +6142,8 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mCTALayout:Landroid/view/View;
+ 
++    invoke-static {v0}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 741
+     sget v0, Lcom/groupme/android/R$id;->profile_year_textview:I
+ 
+@@ -6175,6 +6177,8 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mCampusSection:Landroid/widget/LinearLayout;
+ 
++    invoke-static {v0}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 744
+     sget v0, Lcom/groupme/android/R$id;->profile_visibility_textview:I
+ 
+@@ -6197,6 +6201,19 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mAvatarView:Lcom/groupme/android/image/AvatarView;
+ 
++    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
++
++    move-result-object v1
++
++    instance-of v2, v1, Landroid/view/View;
++
++    if-eqz v2, :kgm_no_av_parent
++
++    check-cast v1, Landroid/view/View;
++
++    invoke-static {v1}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
++    :kgm_no_av_parent
+     .line 746
+     sget v0, Lcom/groupme/android/R$id;->presence_indicator:I
+ 
+@@ -6283,6 +6300,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mFacebookButton:Landroid/widget/Button;
  
@@ -2444,7 +2482,16 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 754
      sget v0, Lcom/groupme/android/R$id;->sharing_switch:I
  
-@@ -6404,6 +6408,10 @@
+@@ -6393,6 +6414,8 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mPhotosContainer:Lcom/google/android/flexbox/FlexboxLayout;
+ 
++    invoke-static {v0}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 764
+     sget v0, Lcom/groupme/android/R$id;->interests_new_nudge:I
+ 
+@@ -6404,6 +6427,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestsNewNudge:Landroid/widget/ImageView;
  
@@ -2455,7 +2502,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 765
      sget v0, Lcom/groupme/android/R$id;->interests_count:I
  
-@@ -6415,6 +6423,10 @@
+@@ -6415,6 +6442,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestCount:Landroid/widget/TextView;
  
@@ -2466,7 +2513,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 766
      sget v0, Lcom/groupme/android/R$id;->add_more_interests:I
  
-@@ -6426,6 +6438,10 @@
+@@ -6426,6 +6457,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestAddMore:Landroid/widget/TextView;
  
@@ -2477,7 +2524,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 767
      sget v0, Lcom/groupme/android/R$id;->layout_add_interests:I
  
-@@ -6435,6 +6451,10 @@
+@@ -6435,6 +6470,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestsCTALayout:Landroid/view/View;
  
@@ -2488,7 +2535,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 768
      sget v0, Lcom/groupme/android/R$id;->cta_add_interests:I
  
-@@ -6446,6 +6466,10 @@
+@@ -6446,6 +6485,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestCTAButton:Landroid/widget/Button;
  
@@ -2499,7 +2546,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 769
      sget v0, Lcom/groupme/android/R$id;->interests_recycler_view:I
  
-@@ -6457,6 +6481,10 @@
+@@ -6457,6 +6500,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestsRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
  
@@ -2510,7 +2557,16 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 770
      new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
  
-@@ -6505,6 +6533,10 @@
+@@ -6483,6 +6530,8 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mPhotosHeaderContainer:Landroid/widget/RelativeLayout;
+ 
++    invoke-static {v0}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 773
+     sget v0, Lcom/groupme/android/R$id;->photos_new_nudge:I
+ 
+@@ -6505,6 +6554,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mSongHeaderContainer:Landroid/widget/RelativeLayout;
  
@@ -2521,7 +2577,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 775
      sget v0, Lcom/groupme/android/R$id;->song_new_nudge:I
  
-@@ -6527,6 +6559,10 @@
+@@ -6527,6 +6580,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mAnthemCTALayout:Landroid/widget/RelativeLayout;
  
@@ -2532,7 +2588,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 777
      sget v0, Lcom/groupme/android/R$id;->spotify_preview_widget:I
  
-@@ -6538,6 +6574,10 @@
+@@ -6538,6 +6595,10 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mSpotifyPreview:Lcom/groupme/android/widget/SpotifyPreview;
  
@@ -2543,7 +2599,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 778
      new-instance v1, Lcom/groupme/android/profile/ProfileFragment$$ExternalSyntheticLambda3;
  
-@@ -6618,6 +6658,74 @@
+@@ -6618,6 +6679,74 @@
      .line 801
      invoke-virtual {p0}, Lcom/groupme/android/profile/ProfileFragment;->fetchDirectoryId()V
  
@@ -2618,7 +2674,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      return-void
  .end method
  
-@@ -7788,7 +7896,10 @@
+@@ -7788,7 +7917,10 @@
  .method public final setInterestsVisibility(Z)V
      .locals 4
  
@@ -2629,7 +2685,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      iget-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mInterestsNewNudge:Landroid/widget/ImageView;
  
      invoke-static {}, Lcom/groupme/ecs/ECSManager;->get()Lcom/groupme/ecs/ECSManager;
-@@ -8414,7 +8525,10 @@
+@@ -8414,7 +8546,10 @@
  .method public final setSpotifyPreview()V
      .locals 2
  
@@ -2640,6 +2696,15 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
  
      move-result-object v0
+@@ -8664,6 +8799,8 @@
+ 
+     check-cast p1, Landroid/widget/Button;
+ 
++    invoke-static {p1}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 867
+     new-instance v0, Lcom/groupme/android/profile/ProfileFragment$$ExternalSyntheticLambda28;
+ 
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/relationship/StartDMFragment.smali base/smali_classes6/com/groupme/android/relationship/StartDMFragment.smali
 --- base_clean/smali_classes6/com/groupme/android/relationship/StartDMFragment.smali	2026-05-11 14:55:08.484366696 -0400
 +++ base/smali_classes6/com/groupme/android/relationship/StartDMFragment.smali	2026-05-11 21:04:16.457947053 -0400
