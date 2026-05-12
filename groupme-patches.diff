@@ -13,6 +13,20 @@ diff -urN --no-dereference '--exclude=build' base_clean/apktool.yml base/apktool
 Binary files base_clean/res/Qrq.xml and base/res/Qrq.xml differ
 Binary files base_clean/res/l_b.xml and base/res/l_b.xml differ
 Binary files base_clean/resources.arsc and base/resources.arsc differ
+diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/azure/android/communication/ui/calling/presentation/CallCompositeActivity.smali base/smali_classes3/com/azure/android/communication/ui/calling/presentation/CallCompositeActivity.smali
+--- base_clean/smali_classes3/com/azure/android/communication/ui/calling/presentation/CallCompositeActivity.smali	2026-05-11 14:55:09.584366696 -0400
++++ base/smali_classes3/com/azure/android/communication/ui/calling/presentation/CallCompositeActivity.smali	2026-05-12 13:41:09.768148357 -0400
+@@ -2521,6 +2521,10 @@
+     .line 125
+     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 126
+     invoke-direct {p0}, Lcom/azure/android/communication/ui/calling/presentation/CallCompositeActivity;->syncPipMode()V
+ 
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/facebook/CustomTabActivity.smali base/smali_classes3/com/facebook/CustomTabActivity.smali
 --- base_clean/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-11 14:55:12.676366695 -0400
 +++ base/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-11 21:04:16.441947053 -0400
@@ -503,6 +517,91 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      invoke-virtual {p0, p6}, Landroidx/core/content/pm/ShortcutInfoCompat$Builder;->setIcon(Landroidx/core/graphics/drawable/IconCompat;)Landroidx/core/content/pm/ShortcutInfoCompat$Builder;
  
      move-result-object p0
+diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/calling/ui/presentationlogic/IncomingCallActivity.smali base/smali_classes5/com/groupme/android/calling/ui/presentationlogic/IncomingCallActivity.smali
+--- base_clean/smali_classes5/com/groupme/android/calling/ui/presentationlogic/IncomingCallActivity.smali	2026-05-11 14:55:17.480366693 -0400
++++ base/smali_classes5/com/groupme/android/calling/ui/presentationlogic/IncomingCallActivity.smali	2026-05-12 13:40:14.384148378 -0400
+@@ -500,6 +500,10 @@
+     .line 74
+     invoke-super {p0, p1}, Lcom/groupme/android/calling/ui/presentationlogic/Hilt_IncomingCallActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
++
++    return-void
++
+     .line 75
+     sget p1, Lcom/groupme/android/R$layout;->activity_incoming_call:I
+ 
+diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatActivity.smali base/smali_classes5/com/groupme/android/chat/ChatActivity.smali
+--- base_clean/smali_classes5/com/groupme/android/chat/ChatActivity.smali	2026-05-11 14:55:17.808366693 -0400
++++ base/smali_classes5/com/groupme/android/chat/ChatActivity.smali	2026-05-12 13:44:02.976148291 -0400
+@@ -6865,6 +6865,8 @@
+ 
+     iput-object v2, v0, Lcom/groupme/android/chat/ChatActivity;->mNotInCallMenu:Landroid/view/View;
+ 
++    invoke-static {v2}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 617
+     sget v2, Lcom/groupme/android/R$id;->container_in_call:I
+ 
+@@ -6874,6 +6876,8 @@
+ 
+     iput-object v2, v0, Lcom/groupme/android/chat/ChatActivity;->mInCallMenu:Landroid/view/View;
+ 
++    invoke-static {v2}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 618
+     sget v2, Lcom/groupme/android/R$id;->button_call_return:I
+ 
+@@ -6883,6 +6887,8 @@
+ 
+     iput-object v2, v0, Lcom/groupme/android/chat/ChatActivity;->mReturnToCallView:Landroid/view/View;
+ 
++    invoke-static {v2}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 619
+     sget v2, Lcom/groupme/android/R$id;->button_join_call:I
+ 
+@@ -6892,6 +6898,8 @@
+ 
+     iput-object v2, v0, Lcom/groupme/android/chat/ChatActivity;->mJoinCallView:Landroid/view/View;
+ 
++    invoke-static {v2}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 621
+     sget v2, Lcom/groupme/android/R$id;->audio_call:I
+ 
+@@ -6899,6 +6907,8 @@
+ 
+     move-result-object v2
+ 
++    invoke-static {v2}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 622
+     sget v3, Lcom/groupme/android/R$id;->video_call:I
+ 
+@@ -6906,6 +6916,8 @@
+ 
+     move-result-object v3
+ 
++    invoke-static {v3}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 624
+     sget v4, Lcom/groupme/android/R$id;->frame_input:I
+ 
+@@ -9231,6 +9243,13 @@
+ 
+     .line 1627
+     :cond_5
++    if-eqz p1, :kgm_no_menu
++
++    sget v0, Lcom/groupme/android/R$id;->menu_item_call:I
++
++    invoke-interface {p1, v0}, Landroid/view/Menu;->removeItem(I)V
++
++    :kgm_no_menu
+     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+ 
+     move-result p0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali base/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali	2026-05-11 14:55:17.784366693 -0400
 +++ base/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali	2026-05-12 13:29:56.960148614 -0400
@@ -610,7 +709,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali base/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali	2026-05-11 14:55:17.876366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali	2026-05-11 21:34:54.082039367 -0400
++++ base/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali	2026-05-12 13:42:05.156148336 -0400
 @@ -61,7 +61,7 @@
  .end method
  
@@ -644,6 +743,24 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
 +
      .line 51
      sget v0, Lcom/groupme/android/R$id;->view_conversation_message_preview:I
+ 
+@@ -183,6 +201,8 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/chat/ConversationListItemViewHolder;->callingActionButton:Landroid/widget/TextView;
+ 
++    invoke-static {v0}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 59
+     sget v0, Lcom/groupme/android/R$id;->announcement_group_icon:I
+ 
+@@ -205,6 +225,8 @@
+ 
+     iput-object v0, p0, Lcom/groupme/android/chat/ConversationListItemViewHolder;->headSetIcon:Landroid/widget/TextView;
+ 
++    invoke-static {v0}, Lcom/groupme/android/chat/InputBarFragment;->kgmHide(Landroid/view/View;)V
++
+     .line 61
+     sget v0, Lcom/groupme/android/R$id;->top_level_event_badge:I
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali base/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali	2026-05-11 14:55:17.888366693 -0400
