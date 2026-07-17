@@ -1,6 +1,6 @@
 diff -urN --no-dereference '--exclude=build' base_clean/apktool.yml base/apktool.yml
 --- base_clean/apktool.yml	2026-05-11 14:55:22.544366691 -0400
-+++ base/apktool.yml	2026-05-17 18:39:51.972160225 -0400
++++ base/apktool.yml	2026-07-16 20:24:33.254565488 -0400
 @@ -7,7 +7,7 @@
  sdkInfo:
  packageInfo:
@@ -15,7 +15,7 @@ Binary files base_clean/res/l_b.xml and base/res/l_b.xml differ
 Binary files base_clean/resources.arsc and base/resources.arsc differ
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/azure/android/communication/ui/calling/presentation/CallCompositeActivity.smali base/smali_classes3/com/azure/android/communication/ui/calling/presentation/CallCompositeActivity.smali
 --- base_clean/smali_classes3/com/azure/android/communication/ui/calling/presentation/CallCompositeActivity.smali	2026-05-11 14:55:09.584366696 -0400
-+++ base/smali_classes3/com/azure/android/communication/ui/calling/presentation/CallCompositeActivity.smali	2026-05-17 18:39:51.972160225 -0400
++++ base/smali_classes3/com/azure/android/communication/ui/calling/presentation/CallCompositeActivity.smali	2026-07-16 20:24:33.258565488 -0400
 @@ -2521,6 +2521,10 @@
      .line 125
      invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
@@ -29,7 +29,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/azure
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/facebook/CustomTabActivity.smali base/smali_classes3/com/facebook/CustomTabActivity.smali
 --- base_clean/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-11 14:55:12.676366695 -0400
-+++ base/smali_classes3/com/facebook/CustomTabActivity.smali	2026-05-17 18:39:51.972160225 -0400
++++ base/smali_classes3/com/facebook/CustomTabActivity.smali	2026-07-16 20:24:33.258565488 -0400
 @@ -208,7 +208,12 @@
      .line 26
      invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
@@ -45,7 +45,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/faceb
      const-class v0, Lcom/facebook/CustomTabMainActivity;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/facebook/CustomTabMainActivity.smali base/smali_classes3/com/facebook/CustomTabMainActivity.smali
 --- base_clean/smali_classes3/com/facebook/CustomTabMainActivity.smali	2026-05-11 14:55:12.676366695 -0400
-+++ base/smali_classes3/com/facebook/CustomTabMainActivity.smali	2026-05-17 18:39:51.972160225 -0400
++++ base/smali_classes3/com/facebook/CustomTabMainActivity.smali	2026-07-16 20:24:33.258565488 -0400
 @@ -343,7 +343,12 @@
      .line 31
      invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
@@ -61,7 +61,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/faceb
      invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali base/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali
 --- base_clean/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali	2026-05-11 14:55:18.332366692 -0400
-+++ base/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali	2026-05-17 18:39:51.972160225 -0400
++++ base/smali_classes3/com/flipgrid/camera/easyintegration/helper/CameraSessionInteraction$DefaultImpls.smali	2026-07-16 20:24:33.262565488 -0400
 @@ -38,12 +38,12 @@
  .end method
  
@@ -98,7 +98,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/flipg
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/groupme/android/message/ReactionTabAdapter.smali base/smali_classes3/com/groupme/android/message/ReactionTabAdapter.smali
 --- base_clean/smali_classes3/com/groupme/android/message/ReactionTabAdapter.smali	2026-05-11 14:55:19.976366692 -0400
-+++ base/smali_classes3/com/groupme/android/message/ReactionTabAdapter.smali	2026-05-17 19:36:02.448158940 -0400
++++ base/smali_classes3/com/groupme/android/message/ReactionTabAdapter.smali	2026-07-16 20:24:33.262565488 -0400
 @@ -393,6 +393,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -109,7 +109,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/group
      new-instance p1, Lcom/groupme/android/message/ReactionTabAdapter$ReactionTabViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/groupme/android/message/ReactionsPillsAdapter.smali base/smali_classes3/com/groupme/android/message/ReactionsPillsAdapter.smali
 --- base_clean/smali_classes3/com/groupme/android/message/ReactionsPillsAdapter.smali	2026-05-11 14:55:20.008366692 -0400
-+++ base/smali_classes3/com/groupme/android/message/ReactionsPillsAdapter.smali	2026-05-17 19:36:02.448158940 -0400
++++ base/smali_classes3/com/groupme/android/message/ReactionsPillsAdapter.smali	2026-07-16 20:24:33.262565488 -0400
 @@ -901,6 +901,7 @@
      invoke-virtual {p2, v1, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -128,7 +128,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/groupme/android/message/SystemMessagesAdapter.smali base/smali_classes3/com/groupme/android/message/SystemMessagesAdapter.smali
 --- base_clean/smali_classes3/com/groupme/android/message/SystemMessagesAdapter.smali	2026-05-11 14:55:20.008366692 -0400
-+++ base/smali_classes3/com/groupme/android/message/SystemMessagesAdapter.smali	2026-05-17 19:36:02.448158940 -0400
++++ base/smali_classes3/com/groupme/android/message/SystemMessagesAdapter.smali	2026-07-16 20:24:33.266565488 -0400
 @@ -207,6 +207,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -139,7 +139,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/groupme/android/message/UserReactionListAdapter.smali base/smali_classes3/com/groupme/android/message/UserReactionListAdapter.smali
 --- base_clean/smali_classes3/com/groupme/android/message/UserReactionListAdapter.smali	2026-05-11 14:55:20.008366692 -0400
-+++ base/smali_classes3/com/groupme/android/message/UserReactionListAdapter.smali	2026-05-17 19:36:02.448158940 -0400
++++ base/smali_classes3/com/groupme/android/message/UserReactionListAdapter.smali	2026-07-16 20:24:33.266565488 -0400
 @@ -405,6 +405,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -150,7 +150,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes3/com/group
      new-instance p1, Lcom/groupme/android/message/UserReactionListAdapter$UserReactionViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/flipgrid/camera/onecamera/capture/integration/CaptureFragment.smali base/smali_classes4/com/flipgrid/camera/onecamera/capture/integration/CaptureFragment.smali
 --- base_clean/smali_classes4/com/flipgrid/camera/onecamera/capture/integration/CaptureFragment.smali	2026-05-11 14:55:08.188366696 -0400
-+++ base/smali_classes4/com/flipgrid/camera/onecamera/capture/integration/CaptureFragment.smali	2026-05-17 18:39:51.976160225 -0400
++++ base/smali_classes4/com/flipgrid/camera/onecamera/capture/integration/CaptureFragment.smali	2026-07-16 20:24:33.274565488 -0400
 @@ -5998,9 +5998,51 @@
  .end method
  
@@ -296,7 +296,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/flipg
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/flipgrid/camera/onecamera/capture/layout/buttons/ImportMediaButton.smali base/smali_classes4/com/flipgrid/camera/onecamera/capture/layout/buttons/ImportMediaButton.smali
 --- base_clean/smali_classes4/com/flipgrid/camera/onecamera/capture/layout/buttons/ImportMediaButton.smali	2026-05-11 14:55:08.948366696 -0400
-+++ base/smali_classes4/com/flipgrid/camera/onecamera/capture/layout/buttons/ImportMediaButton.smali	2026-05-17 18:39:51.976160225 -0400
++++ base/smali_classes4/com/flipgrid/camera/onecamera/capture/layout/buttons/ImportMediaButton.smali	2026-07-16 20:24:33.274565488 -0400
 @@ -163,7 +163,7 @@
      if-eqz p8, :cond_6
  
@@ -308,7 +308,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/flipg
      move p8, p6
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/groupme/android/more/MoreOptionsListAdapter.smali base/smali_classes4/com/groupme/android/more/MoreOptionsListAdapter.smali
 --- base_clean/smali_classes4/com/groupme/android/more/MoreOptionsListAdapter.smali	2026-05-11 14:55:17.748366693 -0400
-+++ base/smali_classes4/com/groupme/android/more/MoreOptionsListAdapter.smali	2026-05-17 18:39:51.976160225 -0400
++++ base/smali_classes4/com/groupme/android/more/MoreOptionsListAdapter.smali	2026-07-16 20:24:33.274565488 -0400
 @@ -196,7 +196,7 @@
      iget-object v1, p2, Lcom/groupme/android/more/MoreOptionsListAdapter$ViewHolder;->nudge:Landroid/widget/LinearLayout;
  
@@ -320,7 +320,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/groupme/android/more/MoreTabFragment.smali base/smali_classes4/com/groupme/android/more/MoreTabFragment.smali
 --- base_clean/smali_classes4/com/groupme/android/more/MoreTabFragment.smali	2026-05-11 14:55:17.784366693 -0400
-+++ base/smali_classes4/com/groupme/android/more/MoreTabFragment.smali	2026-05-17 18:39:51.976160225 -0400
++++ base/smali_classes4/com/groupme/android/more/MoreTabFragment.smali	2026-07-16 20:24:33.278565488 -0400
 @@ -367,6 +367,8 @@
  
      move-result v0
@@ -374,7 +374,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/groupme/android/net/ProtectedRequestQueue.smali base/smali_classes4/com/groupme/android/net/ProtectedRequestQueue.smali
 --- base_clean/smali_classes4/com/groupme/android/net/ProtectedRequestQueue.smali	2026-05-11 14:55:17.884366693 -0400
-+++ base/smali_classes4/com/groupme/android/net/ProtectedRequestQueue.smali	2026-07-16 14:02:26.016918628 -0400
++++ base/smali_classes4/com/groupme/android/net/ProtectedRequestQueue.smali	2026-07-16 20:24:33.278565488 -0400
 @@ -176,7 +176,8 @@
  
      instance-of v0, p1, Lcom/groupme/android/verification/GetVerificationNonceRequest;
@@ -387,7 +387,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/HomeActivity.smali base/smali_classes5/com/groupme/android/HomeActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/HomeActivity.smali	2026-05-11 14:55:16.788366693 -0400
-+++ base/smali_classes5/com/groupme/android/HomeActivity.smali	2026-05-17 19:43:13.532158775 -0400
++++ base/smali_classes5/com/groupme/android/HomeActivity.smali	2026-07-16 20:24:33.282565488 -0400
 @@ -678,6 +678,144 @@
      return-void
  .end method
@@ -583,7 +583,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 762
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/SharingShortcutsManager.smali base/smali_classes5/com/groupme/android/SharingShortcutsManager.smali
 --- base_clean/smali_classes5/com/groupme/android/SharingShortcutsManager.smali	2026-05-11 14:55:16.820366693 -0400
-+++ base/smali_classes5/com/groupme/android/SharingShortcutsManager.smali	2026-05-17 18:39:51.980160225 -0400
++++ base/smali_classes5/com/groupme/android/SharingShortcutsManager.smali	2026-07-16 20:24:33.282565488 -0400
 @@ -152,6 +152,7 @@
      move-result-object p0
  
@@ -602,7 +602,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      move-result-object p0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/album/adapters/AlbumCarouselAdapter.smali base/smali_classes5/com/groupme/android/album/adapters/AlbumCarouselAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/album/adapters/AlbumCarouselAdapter.smali	2026-05-11 14:55:16.848366693 -0400
-+++ base/smali_classes5/com/groupme/android/album/adapters/AlbumCarouselAdapter.smali	2026-05-17 19:36:02.392158940 -0400
++++ base/smali_classes5/com/groupme/android/album/adapters/AlbumCarouselAdapter.smali	2026-07-16 20:24:33.282565488 -0400
 @@ -646,6 +646,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -621,7 +621,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/album/adapters/AlbumCarouselAdapter$AlbumCarouselItemViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/calling/ui/presentationlogic/IncomingCallActivity.smali base/smali_classes5/com/groupme/android/calling/ui/presentationlogic/IncomingCallActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/calling/ui/presentationlogic/IncomingCallActivity.smali	2026-05-11 14:55:17.480366693 -0400
-+++ base/smali_classes5/com/groupme/android/calling/ui/presentationlogic/IncomingCallActivity.smali	2026-05-17 18:39:51.980160225 -0400
++++ base/smali_classes5/com/groupme/android/calling/ui/presentationlogic/IncomingCallActivity.smali	2026-07-16 20:24:33.286565488 -0400
 @@ -500,6 +500,10 @@
      .line 74
      invoke-super {p0, p1}, Lcom/groupme/android/calling/ui/presentationlogic/Hilt_IncomingCallActivity;->onCreate(Landroid/os/Bundle;)V
@@ -635,7 +635,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatActivity.smali base/smali_classes5/com/groupme/android/chat/ChatActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ChatActivity.smali	2026-05-11 14:55:17.808366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/ChatActivity.smali	2026-05-17 18:39:51.980160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/ChatActivity.smali	2026-07-16 20:24:33.290565488 -0400
 @@ -6865,6 +6865,8 @@
  
      iput-object v2, v0, Lcom/groupme/android/chat/ChatActivity;->mNotInCallMenu:Landroid/view/View;
@@ -706,7 +706,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      move-result p0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali base/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali	2026-05-11 14:55:17.784366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali	2026-05-17 18:39:51.984160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/ChatDetailsFragment.smali	2026-07-16 20:24:33.290565488 -0400
 @@ -9263,6 +9263,8 @@
  
      move-result v0
@@ -718,7 +718,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      if-eqz v0, :cond_0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsListAdapter.smali base/smali_classes5/com/groupme/android/chat/ChatDetailsListAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ChatDetailsListAdapter.smali	2026-05-11 14:55:17.664366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/ChatDetailsListAdapter.smali	2026-05-17 19:36:02.392158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/ChatDetailsListAdapter.smali	2026-07-16 20:24:33.294565488 -0400
 @@ -1107,6 +1107,32 @@
  
      move-result-object v0
@@ -762,7 +762,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/chat/ChatDetailsListAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatFragment.smali base/smali_classes5/com/groupme/android/chat/ChatFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ChatFragment.smali	2026-05-11 14:55:17.860366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/ChatFragment.smali	2026-05-18 03:15:01.640148434 -0400
++++ base/smali_classes5/com/groupme/android/chat/ChatFragment.smali	2026-07-16 20:24:33.298565488 -0400
 @@ -3391,6 +3391,20 @@
  
      .line 1120
@@ -840,7 +840,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ChatMessagesAdapter.smali base/smali_classes5/com/groupme/android/chat/ChatMessagesAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ChatMessagesAdapter.smali	2026-05-11 14:55:17.864366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/ChatMessagesAdapter.smali	2026-05-17 19:36:02.396158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/ChatMessagesAdapter.smali	2026-07-16 20:24:33.302565488 -0400
 @@ -3905,6 +3905,7 @@
      invoke-virtual {v1, v3, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -931,7 +931,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali base/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali	2026-05-11 14:55:17.876366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali	2026-05-17 18:39:51.984160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/ConversationListItemViewHolder.smali	2026-07-16 20:24:33.302565488 -0400
 @@ -61,7 +61,7 @@
  .end method
  
@@ -986,7 +986,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali base/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali	2026-05-11 14:55:17.888366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali	2026-05-17 18:39:51.988160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/CopilotConsentSheetFragment.smali	2026-07-16 20:24:33.302565488 -0400
 @@ -479,6 +479,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 1
@@ -1001,7 +1001,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 39
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/HeaderPillsAdapter.smali base/smali_classes5/com/groupme/android/chat/HeaderPillsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/HeaderPillsAdapter.smali	2026-05-11 14:55:17.984366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/HeaderPillsAdapter.smali	2026-05-17 19:36:02.400158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/HeaderPillsAdapter.smali	2026-07-16 20:24:33.302565488 -0400
 @@ -752,6 +752,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1012,7 +1012,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/chat/HeaderPillsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/InputBarFragment.smali base/smali_classes5/com/groupme/android/chat/InputBarFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/InputBarFragment.smali	2026-05-11 14:55:18.028366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/InputBarFragment.smali	2026-05-17 18:39:51.988160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/InputBarFragment.smali	2026-07-16 20:24:33.306565488 -0400
 @@ -3358,6 +3358,8 @@
  
      iput-object v0, p0, Lcom/groupme/android/chat/InputBarFragment;->mAtMentionButton:Landroid/widget/ImageButton;
@@ -1064,7 +1064,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/ReactionsStripAdapter.smali base/smali_classes5/com/groupme/android/chat/ReactionsStripAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/ReactionsStripAdapter.smali	2026-05-11 14:55:17.980366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/ReactionsStripAdapter.smali	2026-05-17 19:36:02.400158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/ReactionsStripAdapter.smali	2026-07-16 20:24:33.306565488 -0400
 @@ -633,6 +633,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1075,7 +1075,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/chat/ReactionsStripAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/TypingNotificationAdapter.smali base/smali_classes5/com/groupme/android/chat/TypingNotificationAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/TypingNotificationAdapter.smali	2026-05-11 14:55:17.996366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/TypingNotificationAdapter.smali	2026-05-17 19:36:02.400158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/TypingNotificationAdapter.smali	2026-07-16 20:24:33.306565488 -0400
 @@ -192,6 +192,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1086,7 +1086,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentFragment.smali base/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentFragment.smali	2026-05-11 14:55:18.008366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentFragment.smali	2026-05-17 19:48:51.304158646 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentFragment.smali	2026-07-16 20:24:33.306565488 -0400
 @@ -1112,6 +1112,8 @@
  
      iput-object p2, p0, Lcom/groupme/android/chat/attachment/ChatAttachmentFragment;->mViewPager:Landroidx/viewpager/widget/ViewPager;
@@ -1162,7 +1162,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
 +
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentPagerAdapter.smali base/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentPagerAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentPagerAdapter.smali	2026-05-11 14:55:18.008366693 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentPagerAdapter.smali	2026-05-17 18:39:51.988160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/ChatAttachmentPagerAdapter.smali	2026-07-16 20:24:33.310565488 -0400
 @@ -204,8 +204,6 @@
  .method public static getPagesDm()[I
      .locals 4
@@ -1195,7 +1195,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/event/AttachEventFragment.smali base/smali_classes5/com/groupme/android/chat/attachment/event/AttachEventFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/event/AttachEventFragment.smali	2026-05-11 14:55:18.104366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/event/AttachEventFragment.smali	2026-05-17 18:39:51.988160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/event/AttachEventFragment.smali	2026-07-16 20:24:33.310565488 -0400
 @@ -257,18 +257,11 @@
  .end method
  
@@ -1220,7 +1220,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/media/ImageCarouselAdapter.smali base/smali_classes5/com/groupme/android/chat/attachment/media/ImageCarouselAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/media/ImageCarouselAdapter.smali	2026-05-11 14:55:18.164366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/media/ImageCarouselAdapter.smali	2026-05-17 19:36:02.400158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/media/ImageCarouselAdapter.smali	2026-07-16 20:24:33.310565488 -0400
 @@ -625,6 +625,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1231,7 +1231,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/media/MediaCarouselAdapter.smali base/smali_classes5/com/groupme/android/chat/attachment/media/MediaCarouselAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/media/MediaCarouselAdapter.smali	2026-05-11 14:55:18.180366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/media/MediaCarouselAdapter.smali	2026-05-17 19:36:02.404158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/media/MediaCarouselAdapter.smali	2026-07-16 20:24:33.310565488 -0400
 @@ -534,6 +534,7 @@
      invoke-virtual {v0, p0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1258,7 +1258,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance v2, Lcom/groupme/android/chat/attachment/media/ImageMediaViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/media/RecentMediaSelectionAdapter.smali base/smali_classes5/com/groupme/android/chat/attachment/media/RecentMediaSelectionAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/media/RecentMediaSelectionAdapter.smali	2026-05-11 14:55:18.228366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/media/RecentMediaSelectionAdapter.smali	2026-05-17 19:36:02.404158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/media/RecentMediaSelectionAdapter.smali	2026-07-16 20:24:33.310565488 -0400
 @@ -1395,6 +1395,7 @@
      invoke-virtual {v0, p0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1277,7 +1277,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/chat/attachment/media/RecentMediaSelectionAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/preview/ImagePickerCaptionFragment.smali base/smali_classes5/com/groupme/android/chat/attachment/preview/ImagePickerCaptionFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/preview/ImagePickerCaptionFragment.smali	2026-05-11 14:55:18.272366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/preview/ImagePickerCaptionFragment.smali	2026-05-17 19:48:12.124158661 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/preview/ImagePickerCaptionFragment.smali	2026-07-16 20:24:33.314565488 -0400
 @@ -1704,6 +1704,8 @@
  
      iput-object v0, p0, Lcom/groupme/android/chat/attachment/preview/ImagePickerCaptionFragment;->mSelectedViewPager:Landroidx/viewpager/widget/ViewPager;
@@ -1289,7 +1289,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/preview/MultiImageAdapter.smali base/smali_classes5/com/groupme/android/chat/attachment/preview/MultiImageAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/preview/MultiImageAdapter.smali	2026-05-11 14:55:18.284366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/preview/MultiImageAdapter.smali	2026-05-17 19:36:02.404158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/preview/MultiImageAdapter.smali	2026-07-16 20:24:33.314565488 -0400
 @@ -272,6 +272,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1300,7 +1300,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/chat/attachment/preview/MultiImageAdapter$MyViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/adapter/SelectedMediaAdapter.smali base/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/adapter/SelectedMediaAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/adapter/SelectedMediaAdapter.smali	2026-05-11 14:55:18.292366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/adapter/SelectedMediaAdapter.smali	2026-05-17 19:36:02.408158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/adapter/SelectedMediaAdapter.smali	2026-07-16 20:24:33.314565488 -0400
 @@ -378,6 +378,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1311,7 +1311,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/chat/attachment/preview/mediaVNext/adapter/SelectedMediaAdapter$ImageViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/view/MediaPreviewFragment.smali base/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/view/MediaPreviewFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/view/MediaPreviewFragment.smali	2026-05-11 14:55:18.320366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/view/MediaPreviewFragment.smali	2026-05-17 19:48:30.780158654 -0400
++++ base/smali_classes5/com/groupme/android/chat/attachment/preview/mediaVNext/view/MediaPreviewFragment.smali	2026-07-16 20:24:33.314565488 -0400
 @@ -3401,6 +3401,8 @@
  
      iput-object v0, p0, Lcom/groupme/android/chat/attachment/preview/mediaVNext/view/MediaPreviewFragment;->vpSelectedMedia:Landroidx/viewpager2/widget/ViewPager2;
@@ -1323,7 +1323,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/calendar/EventCreateUpdateActivity.smali base/smali_classes5/com/groupme/android/chat/calendar/EventCreateUpdateActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/calendar/EventCreateUpdateActivity.smali	2026-05-11 14:55:18.336366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/calendar/EventCreateUpdateActivity.smali	2026-05-17 18:39:51.988160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/calendar/EventCreateUpdateActivity.smali	2026-07-16 20:24:33.318565488 -0400
 @@ -691,6 +691,10 @@
      .line 100
      invoke-super/range {p0 .. p1}, Lcom/groupme/android/chat/calendar/Hilt_EventCreateUpdateActivity;->onCreate(Landroid/os/Bundle;)V
@@ -1337,7 +1337,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/calendar/EventDetailActivity.smali base/smali_classes5/com/groupme/android/chat/calendar/EventDetailActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/calendar/EventDetailActivity.smali	2026-05-11 14:55:18.324366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/calendar/EventDetailActivity.smali	2026-05-17 18:39:51.988160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/calendar/EventDetailActivity.smali	2026-07-16 20:24:33.318565488 -0400
 @@ -440,6 +440,10 @@
      .line 90
      invoke-super {p0, p1}, Lcom/groupme/android/chat/calendar/Hilt_EventDetailActivity;->onCreate(Landroid/os/Bundle;)V
@@ -1351,7 +1351,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/emoji/EmojiPackKeyboardAdapter.smali base/smali_classes5/com/groupme/android/chat/emoji/EmojiPackKeyboardAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/emoji/EmojiPackKeyboardAdapter.smali	2026-05-11 14:55:18.376366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/emoji/EmojiPackKeyboardAdapter.smali	2026-05-17 19:40:10.508158845 -0400
++++ base/smali_classes5/com/groupme/android/chat/emoji/EmojiPackKeyboardAdapter.smali	2026-07-16 20:24:33.318565488 -0400
 @@ -433,6 +433,8 @@
  
      invoke-direct {p0, v0}, Lcom/groupme/android/chat/emoji/EmojiPackKeyboardAdapter$ViewHolder;-><init>(Landroid/view/View;)V
@@ -1372,7 +1372,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/emoji/EmojiSearchAdapter.smali base/smali_classes5/com/groupme/android/chat/emoji/EmojiSearchAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/emoji/EmojiSearchAdapter.smali	2026-05-11 14:55:18.368366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/emoji/EmojiSearchAdapter.smali	2026-05-17 19:40:50.752158830 -0400
++++ base/smali_classes5/com/groupme/android/chat/emoji/EmojiSearchAdapter.smali	2026-07-16 20:24:33.318565488 -0400
 @@ -285,6 +285,8 @@
  
      invoke-direct {p0, p2}, Lcom/groupme/android/chat/emoji/EmojiSearchAdapter$ViewHolder;-><init>(Landroid/view/View;)V
@@ -1393,7 +1393,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter$FilterViewHolder.smali base/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter$FilterViewHolder.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter$FilterViewHolder.smali	2026-05-11 14:55:18.368366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter$FilterViewHolder.smali	2026-05-17 18:39:51.988160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter$FilterViewHolder.smali	2026-07-16 20:24:33.322565488 -0400
 @@ -283,6 +283,17 @@
  
      move-result-object v1
@@ -1414,7 +1414,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 149
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter.smali base/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter.smali	2026-05-11 14:55:18.396366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter.smali	2026-05-17 19:36:02.408158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/filters/adapters/ChatFilterAdapter.smali	2026-07-16 20:24:33.322565488 -0400
 @@ -576,6 +576,7 @@
      invoke-virtual {p2, v1, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1490,7 +1490,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/gallery/GalleryAdapter.smali base/smali_classes5/com/groupme/android/chat/gallery/GalleryAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/gallery/GalleryAdapter.smali	2026-05-11 14:55:18.440366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/gallery/GalleryAdapter.smali	2026-05-17 19:36:02.408158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/gallery/GalleryAdapter.smali	2026-07-16 20:24:33.322565488 -0400
 @@ -964,6 +964,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1501,7 +1501,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/chat/gallery/GalleryAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/holder/MessageViewHolder.smali base/smali_classes5/com/groupme/android/chat/holder/MessageViewHolder.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/holder/MessageViewHolder.smali	2026-05-11 14:55:18.628366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/holder/MessageViewHolder.smali	2026-05-17 19:41:32.512158814 -0400
++++ base/smali_classes5/com/groupme/android/chat/holder/MessageViewHolder.smali	2026-07-16 20:24:33.326565488 -0400
 @@ -6789,6 +6789,10 @@
  
      invoke-virtual {v0, p0}, Landroid/view/View;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
@@ -1515,7 +1515,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/holder/favorites/FavoritesAdapter.smali base/smali_classes5/com/groupme/android/chat/holder/favorites/FavoritesAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/holder/favorites/FavoritesAdapter.smali	2026-05-11 14:55:18.640366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/holder/favorites/FavoritesAdapter.smali	2026-05-17 19:36:02.412158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/holder/favorites/FavoritesAdapter.smali	2026-07-16 20:24:33.326565488 -0400
 @@ -357,6 +357,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1526,7 +1526,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-11 14:55:18.660366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-05-17 18:39:51.988160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/inline/HtmlPreviewInlineContent.smali	2026-07-16 20:24:33.326565488 -0400
 @@ -127,6 +127,13 @@
  
      move-object/from16 v0, p1
@@ -1543,7 +1543,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      invoke-virtual/range {p2 .. p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali base/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali	2026-05-11 14:55:18.660366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali	2026-05-17 18:39:51.988160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/inline/InlineContentLoader.smali	2026-07-16 20:24:33.330565488 -0400
 @@ -730,6 +730,13 @@
  
      move-object/from16 v5, p3
@@ -1560,7 +1560,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/inline/JoinEventInlineContent.smali base/smali_classes5/com/groupme/android/chat/inline/JoinEventInlineContent.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/inline/JoinEventInlineContent.smali	2026-05-11 14:55:18.684366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/inline/JoinEventInlineContent.smali	2026-05-17 18:39:51.992160225 -0400
++++ base/smali_classes5/com/groupme/android/chat/inline/JoinEventInlineContent.smali	2026-07-16 20:24:33.330565488 -0400
 @@ -388,6 +388,25 @@
  .method public bindView(Landroid/view/View;Lcom/groupme/android/chat/inline/InlineData;Lcom/groupme/android/chat/inline/InlineContentModel;)V
      .locals 12
@@ -1589,7 +1589,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/poll/PollOptionsAdapter.smali base/smali_classes5/com/groupme/android/chat/poll/PollOptionsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/poll/PollOptionsAdapter.smali	2026-05-11 14:55:18.916366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/poll/PollOptionsAdapter.smali	2026-05-17 19:36:02.412158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/poll/PollOptionsAdapter.smali	2026-07-16 20:24:33.330565488 -0400
 @@ -2961,6 +2961,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1624,7 +1624,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/chat/poll/PollOptionsAdapter$PollOptionButtonItemViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/poll/PollsListAdapter.smali base/smali_classes5/com/groupme/android/chat/poll/PollsListAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/poll/PollsListAdapter.smali	2026-05-11 14:55:18.916366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/poll/PollsListAdapter.smali	2026-05-17 19:36:02.416158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/poll/PollsListAdapter.smali	2026-07-16 20:24:33.330565488 -0400
 @@ -858,6 +858,7 @@
      invoke-virtual {v0, p0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1643,7 +1643,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/chat/poll/PollsListAdapter$PollInListViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/poll/VotesByUserAdapter.smali base/smali_classes5/com/groupme/android/chat/poll/VotesByUserAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/poll/VotesByUserAdapter.smali	2026-05-11 14:55:18.904366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/poll/VotesByUserAdapter.smali	2026-05-17 19:36:02.416158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/poll/VotesByUserAdapter.smali	2026-07-16 20:24:33.330565488 -0400
 @@ -288,6 +288,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1654,7 +1654,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/chat/poll/VotesByUserAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/theme/ChatThemeAdapter.smali base/smali_classes5/com/groupme/android/chat/theme/ChatThemeAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/theme/ChatThemeAdapter.smali	2026-05-11 14:55:18.912366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/theme/ChatThemeAdapter.smali	2026-05-17 19:36:02.416158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/theme/ChatThemeAdapter.smali	2026-07-16 20:24:33.334565488 -0400
 @@ -203,6 +203,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1665,7 +1665,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/chat/theme/ThemeViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/theme/ChatThemeCategoryAdapter.smali base/smali_classes5/com/groupme/android/chat/theme/ChatThemeCategoryAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/theme/ChatThemeCategoryAdapter.smali	2026-05-11 14:55:18.924366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/theme/ChatThemeCategoryAdapter.smali	2026-05-17 19:36:02.416158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/theme/ChatThemeCategoryAdapter.smali	2026-07-16 20:24:33.334565488 -0400
 @@ -192,6 +192,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1676,7 +1676,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/chat/theme/ChatThemeCategoryAdapter$CategoryViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/chat/theme/ThemePreviewPagerAdapter.smali base/smali_classes5/com/groupme/android/chat/theme/ThemePreviewPagerAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/chat/theme/ThemePreviewPagerAdapter.smali	2026-05-11 14:55:18.980366692 -0400
-+++ base/smali_classes5/com/groupme/android/chat/theme/ThemePreviewPagerAdapter.smali	2026-05-17 19:36:02.416158940 -0400
++++ base/smali_classes5/com/groupme/android/chat/theme/ThemePreviewPagerAdapter.smali	2026-07-16 20:24:33.334565488 -0400
 @@ -291,6 +291,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1687,7 +1687,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/chat/theme/ThemePreviewPagerAdapter$ThemePageViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/contacts/AddToGroupAdapter.smali base/smali_classes5/com/groupme/android/contacts/AddToGroupAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/contacts/AddToGroupAdapter.smali	2026-05-11 14:55:19.328366692 -0400
-+++ base/smali_classes5/com/groupme/android/contacts/AddToGroupAdapter.smali	2026-05-17 19:36:02.416158940 -0400
++++ base/smali_classes5/com/groupme/android/contacts/AddToGroupAdapter.smali	2026-07-16 20:24:33.334565488 -0400
 @@ -305,6 +305,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1706,7 +1706,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/contacts/AddToGroupAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/contacts/FindFriendsAdapter.smali base/smali_classes5/com/groupme/android/contacts/FindFriendsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/contacts/FindFriendsAdapter.smali	2026-05-11 14:55:19.380366692 -0400
-+++ base/smali_classes5/com/groupme/android/contacts/FindFriendsAdapter.smali	2026-05-17 19:36:02.420158940 -0400
++++ base/smali_classes5/com/groupme/android/contacts/FindFriendsAdapter.smali	2026-07-16 20:24:33.334565488 -0400
 @@ -404,6 +404,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1725,7 +1725,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      :goto_0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/contacts/GroupMeContactsAdapter.smali base/smali_classes5/com/groupme/android/contacts/GroupMeContactsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/contacts/GroupMeContactsAdapter.smali	2026-05-11 14:55:19.404366692 -0400
-+++ base/smali_classes5/com/groupme/android/contacts/GroupMeContactsAdapter.smali	2026-05-17 19:36:02.420158940 -0400
++++ base/smali_classes5/com/groupme/android/contacts/GroupMeContactsAdapter.smali	2026-07-16 20:24:33.338565488 -0400
 @@ -818,6 +818,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1752,7 +1752,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      :goto_0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/contacts/MutualGroupsAdapter.smali base/smali_classes5/com/groupme/android/contacts/MutualGroupsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/contacts/MutualGroupsAdapter.smali	2026-05-11 14:55:19.496366692 -0400
-+++ base/smali_classes5/com/groupme/android/contacts/MutualGroupsAdapter.smali	2026-05-17 19:36:02.420158940 -0400
++++ base/smali_classes5/com/groupme/android/contacts/MutualGroupsAdapter.smali	2026-07-16 20:24:33.338565488 -0400
 @@ -216,6 +216,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -1763,7 +1763,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/contacts/MutualGroupsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali base/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali
 --- base_clean/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali	2026-05-11 14:55:19.528366692 -0400
-+++ base/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali	2026-05-17 18:39:51.992160225 -0400
++++ base/smali_classes5/com/groupme/android/conversation/ConversationListEmptyStateView.smali	2026-07-16 20:24:33.338565488 -0400
 @@ -219,6 +219,8 @@
  
      if-eqz p2, :cond_5
@@ -1775,7 +1775,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/conversation/ConversationListFragment.smali base/smali_classes5/com/groupme/android/conversation/ConversationListFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/conversation/ConversationListFragment.smali	2026-05-11 14:55:19.624366692 -0400
-+++ base/smali_classes5/com/groupme/android/conversation/ConversationListFragment.smali	2026-05-17 18:39:51.992160225 -0400
++++ base/smali_classes5/com/groupme/android/conversation/ConversationListFragment.smali	2026-07-16 20:24:33.342565488 -0400
 @@ -1679,18 +1679,11 @@
      :goto_0
      iget-object v4, p0, Lcom/groupme/android/conversation/ConversationListFragment;->mFilterContainer:Landroid/view/View;
@@ -2156,7 +2156,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/conversation/ManagePinnedChatsFragment.smali base/smali_classes5/com/groupme/android/conversation/ManagePinnedChatsFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/conversation/ManagePinnedChatsFragment.smali	2026-05-11 14:55:19.748366692 -0400
-+++ base/smali_classes5/com/groupme/android/conversation/ManagePinnedChatsFragment.smali	2026-05-18 03:18:37.440148352 -0400
++++ base/smali_classes5/com/groupme/android/conversation/ManagePinnedChatsFragment.smali	2026-07-16 20:24:33.342565488 -0400
 @@ -699,7 +699,7 @@
  .end method
  
@@ -2181,7 +2181,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/conversation/PinnedCarouselAdapter.smali base/smali_classes5/com/groupme/android/conversation/PinnedCarouselAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/conversation/PinnedCarouselAdapter.smali	2026-05-11 14:55:19.808366692 -0400
-+++ base/smali_classes5/com/groupme/android/conversation/PinnedCarouselAdapter.smali	2026-05-17 19:36:02.420158940 -0400
++++ base/smali_classes5/com/groupme/android/conversation/PinnedCarouselAdapter.smali	2026-07-16 20:24:33.342565488 -0400
 @@ -477,6 +477,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2192,7 +2192,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/conversation/PinnedCarouselAdapter$PinnedViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/CopilotV2State.smali base/smali_classes5/com/groupme/android/copilot/CopilotV2State.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/CopilotV2State.smali	2026-05-11 14:55:19.904366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/CopilotV2State.smali	2026-05-17 18:39:51.992160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/CopilotV2State.smali	2026-07-16 20:24:33.346565488 -0400
 @@ -476,6 +476,11 @@
  .method public static final isCopilotChatEnabled()Z
      .locals 2
@@ -2219,7 +2219,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotBottomSheetFragment.smali base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotBottomSheetFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotBottomSheetFragment.smali	2026-05-11 14:55:19.904366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotBottomSheetFragment.smali	2026-05-17 18:39:51.992160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotBottomSheetFragment.smali	2026-07-16 20:24:33.346565488 -0400
 @@ -948,6 +948,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -2234,7 +2234,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 172
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotConsentFragment.smali base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotConsentFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotConsentFragment.smali	2026-05-11 14:55:19.908366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotConsentFragment.smali	2026-05-17 18:39:51.992160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotConsentFragment.smali	2026-07-16 20:24:33.346565488 -0400
 @@ -157,6 +157,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -2249,7 +2249,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 38
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotFragment.smali base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotFragment.smali	2026-05-11 14:55:19.988366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotFragment.smali	2026-05-17 18:39:51.992160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/askcopilot/AskCopilotFragment.smali	2026-07-16 20:24:33.346565488 -0400
 @@ -3429,6 +3429,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -2264,7 +2264,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 180
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/cards/FlashcardFullScreenActivity.smali base/smali_classes5/com/groupme/android/copilot/cards/FlashcardFullScreenActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/cards/FlashcardFullScreenActivity.smali	2026-05-11 14:55:20.096366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/cards/FlashcardFullScreenActivity.smali	2026-05-17 18:39:51.992160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/cards/FlashcardFullScreenActivity.smali	2026-07-16 20:24:33.350565488 -0400
 @@ -1372,6 +1372,11 @@
      .line 70
      invoke-super {p0, p1}, Lcom/groupme/android/copilot/cards/Hilt_FlashcardFullScreenActivity;->onCreate(Landroid/os/Bundle;)V
@@ -2279,7 +2279,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/cards/QuizFullScreenActivity.smali base/smali_classes5/com/groupme/android/copilot/cards/QuizFullScreenActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/cards/QuizFullScreenActivity.smali	2026-05-11 14:55:20.100366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/cards/QuizFullScreenActivity.smali	2026-05-17 18:39:51.996160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/cards/QuizFullScreenActivity.smali	2026-07-16 20:24:33.350565488 -0400
 @@ -1272,6 +1272,11 @@
      .line 66
      invoke-super {p0, p1}, Lcom/groupme/android/copilot/cards/Hilt_QuizFullScreenActivity;->onCreate(Landroid/os/Bundle;)V
@@ -2294,7 +2294,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      const/4 v1, 0x0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment.smali base/smali_classes5/com/groupme/android/copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment.smali	2026-05-11 14:55:20.124366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment.smali	2026-05-17 18:39:51.996160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/cards/leaderboard/ui/LeaderboardBottomSheetFragment.smali	2026-07-16 20:24:33.350565488 -0400
 @@ -786,6 +786,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 6
@@ -2309,7 +2309,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 71
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/cards/share/ChatSelectorBottomSheetFragment.smali base/smali_classes5/com/groupme/android/copilot/cards/share/ChatSelectorBottomSheetFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/cards/share/ChatSelectorBottomSheetFragment.smali	2026-05-11 14:55:20.152366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/cards/share/ChatSelectorBottomSheetFragment.smali	2026-05-17 18:39:51.996160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/cards/share/ChatSelectorBottomSheetFragment.smali	2026-07-16 20:24:33.350565488 -0400
 @@ -603,6 +603,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 6
@@ -2324,7 +2324,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 87
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingActivity.smali base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingActivity.smali	2026-05-11 14:55:20.192366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingActivity.smali	2026-05-17 18:39:51.996160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingActivity.smali	2026-07-16 20:24:33.354565488 -0400
 @@ -75,6 +75,11 @@
      .line 13
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -2339,7 +2339,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingFragment.smali base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingFragment.smali	2026-05-11 14:55:20.196366692 -0400
-+++ base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingFragment.smali	2026-05-17 18:39:51.996160225 -0400
++++ base/smali_classes5/com/groupme/android/copilot/settings/CopilotSettingFragment.smali	2026-07-16 20:24:33.354565488 -0400
 @@ -198,6 +198,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 1
@@ -2354,7 +2354,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 30
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/event/adapters/AttendeesListAdapter.smali base/smali_classes5/com/groupme/android/event/adapters/AttendeesListAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/event/adapters/AttendeesListAdapter.smali	2026-05-11 14:55:20.300366692 -0400
-+++ base/smali_classes5/com/groupme/android/event/adapters/AttendeesListAdapter.smali	2026-05-17 19:36:02.420158940 -0400
++++ base/smali_classes5/com/groupme/android/event/adapters/AttendeesListAdapter.smali	2026-07-16 20:24:33.354565488 -0400
 @@ -505,6 +505,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2373,7 +2373,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      :goto_0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/event/adapters/EventsListAdapter.smali base/smali_classes5/com/groupme/android/event/adapters/EventsListAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/event/adapters/EventsListAdapter.smali	2026-05-11 14:55:20.304366692 -0400
-+++ base/smali_classes5/com/groupme/android/event/adapters/EventsListAdapter.smali	2026-05-17 19:36:02.424158940 -0400
++++ base/smali_classes5/com/groupme/android/event/adapters/EventsListAdapter.smali	2026-07-16 20:24:33.354565488 -0400
 @@ -751,6 +751,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2384,7 +2384,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/event/adapters/EventsListAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/event/views/EventCreateUpdateFragment.smali base/smali_classes5/com/groupme/android/event/views/EventCreateUpdateFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/event/views/EventCreateUpdateFragment.smali	2026-05-11 14:55:20.500366692 -0400
-+++ base/smali_classes5/com/groupme/android/event/views/EventCreateUpdateFragment.smali	2026-05-17 18:39:51.996160225 -0400
++++ base/smali_classes5/com/groupme/android/event/views/EventCreateUpdateFragment.smali	2026-07-16 20:24:33.358565488 -0400
 @@ -6953,68 +6953,9 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 1
@@ -2457,7 +2457,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  .method public onDetach()V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/event/views/EventDetailsFragment.smali base/smali_classes5/com/groupme/android/event/views/EventDetailsFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/event/views/EventDetailsFragment.smali	2026-05-11 14:55:20.468366692 -0400
-+++ base/smali_classes5/com/groupme/android/event/views/EventDetailsFragment.smali	2026-05-17 18:39:51.996160225 -0400
++++ base/smali_classes5/com/groupme/android/event/views/EventDetailsFragment.smali	2026-07-16 20:24:33.362565488 -0400
 @@ -6561,74 +6561,11 @@
  .end method
  
@@ -2537,7 +2537,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  .method public onGoingClicked(Lcom/groupme/api/Event;Z)V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/event/views/EventsListFragment.smali base/smali_classes5/com/groupme/android/event/views/EventsListFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/event/views/EventsListFragment.smali	2026-05-11 14:55:20.456366692 -0400
-+++ base/smali_classes5/com/groupme/android/event/views/EventsListFragment.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/event/views/EventsListFragment.smali	2026-07-16 20:24:33.362565488 -0400
 @@ -351,33 +351,11 @@
  .end method
  
@@ -2577,7 +2577,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  .method public onGoingClicked(Lcom/groupme/api/Event;Z)V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/event/views/JoinEventSuccessFragment.smali base/smali_classes5/com/groupme/android/event/views/JoinEventSuccessFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/event/views/JoinEventSuccessFragment.smali	2026-05-11 14:55:20.456366692 -0400
-+++ base/smali_classes5/com/groupme/android/event/views/JoinEventSuccessFragment.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/event/views/JoinEventSuccessFragment.smali	2026-07-16 20:24:33.362565488 -0400
 @@ -606,80 +606,11 @@
  
  # virtual methods
@@ -2663,7 +2663,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  .method public onPause()V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/event/views/RecurringEventBottomSheetFragment.smali base/smali_classes5/com/groupme/android/event/views/RecurringEventBottomSheetFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/event/views/RecurringEventBottomSheetFragment.smali	2026-05-11 14:55:20.472366692 -0400
-+++ base/smali_classes5/com/groupme/android/event/views/RecurringEventBottomSheetFragment.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/event/views/RecurringEventBottomSheetFragment.smali	2026-07-16 20:24:33.366565488 -0400
 @@ -1538,20 +1538,11 @@
  .end method
  
@@ -2690,7 +2690,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  .method public onDetach()V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/GroupLocationStripAdapter.smali base/smali_classes5/com/groupme/android/group/GroupLocationStripAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/GroupLocationStripAdapter.smali	2026-05-11 14:55:20.592366692 -0400
-+++ base/smali_classes5/com/groupme/android/group/GroupLocationStripAdapter.smali	2026-05-17 19:36:02.424158940 -0400
++++ base/smali_classes5/com/groupme/android/group/GroupLocationStripAdapter.smali	2026-07-16 20:24:33.366565488 -0400
 @@ -405,6 +405,7 @@
      invoke-virtual {p2, p0, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2701,7 +2701,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/group/GroupLocationStripAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/GroupMeGroupsAdapter.smali base/smali_classes5/com/groupme/android/group/GroupMeGroupsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/GroupMeGroupsAdapter.smali	2026-05-11 14:55:20.604366692 -0400
-+++ base/smali_classes5/com/groupme/android/group/GroupMeGroupsAdapter.smali	2026-05-17 19:36:02.424158940 -0400
++++ base/smali_classes5/com/groupme/android/group/GroupMeGroupsAdapter.smali	2026-07-16 20:24:33.366565488 -0400
 @@ -454,6 +454,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2728,7 +2728,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      :goto_0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/JoinGroupActivity.smali base/smali_classes5/com/groupme/android/group/JoinGroupActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/group/JoinGroupActivity.smali	2026-05-11 14:55:20.672366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/JoinGroupActivity.smali	2026-06-09 23:46:27.087449462 -0400
++++ base/smali_classes5/com/groupme/android/group/JoinGroupActivity.smali	2026-07-16 20:24:33.366565488 -0400
 @@ -357,10 +357,27 @@
      invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
  
@@ -2761,7 +2761,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 327
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-11 14:55:20.756366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/CampusActivity.smali	2026-07-16 20:24:33.370565488 -0400
 @@ -113,7 +113,12 @@
      .line 37
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -2777,7 +2777,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali base/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali	2026-05-11 14:55:20.760366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/CampusDealsFragment.smali	2026-07-16 20:24:33.370565488 -0400
 @@ -470,6 +470,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -2792,7 +2792,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 61
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/GraduationYearAdapter.smali base/smali_classes5/com/groupme/android/group/directory/GraduationYearAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/GraduationYearAdapter.smali	2026-05-11 14:55:20.916366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/GraduationYearAdapter.smali	2026-05-17 19:36:02.424158940 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/GraduationYearAdapter.smali	2026-07-16 20:24:33.370565488 -0400
 @@ -257,6 +257,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2803,7 +2803,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/group/directory/GraduationYearAdapter$GraduationYearViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCarouselAdapter.smali base/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCarouselAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCarouselAdapter.smali	2026-05-11 14:55:20.956366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCarouselAdapter.smali	2026-05-17 19:36:02.428158940 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCarouselAdapter.smali	2026-07-16 20:24:33.370565488 -0400
 @@ -1402,6 +1402,7 @@
      invoke-virtual {p0, p2, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2830,7 +2830,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/group/directory/adapter/CampusEventCarouselAdapter$HeaderViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCreateTemplateCarouselAdapter.smali base/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCreateTemplateCarouselAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCreateTemplateCarouselAdapter.smali	2026-05-11 14:55:20.932366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCreateTemplateCarouselAdapter.smali	2026-05-17 19:36:02.428158940 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/adapter/CampusEventCreateTemplateCarouselAdapter.smali	2026-07-16 20:24:33.370565488 -0400
 @@ -440,6 +440,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2841,7 +2841,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/adapter/MajorListAdapter.smali base/smali_classes5/com/groupme/android/group/directory/adapter/MajorListAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/adapter/MajorListAdapter.smali	2026-05-11 14:55:20.932366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/adapter/MajorListAdapter.smali	2026-05-17 19:36:02.428158940 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/adapter/MajorListAdapter.smali	2026-07-16 20:24:33.374565488 -0400
 @@ -667,6 +667,7 @@
      invoke-virtual {p2, v0, p1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2860,7 +2860,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/group/directory/adapter/MajorListAdapter$ItemViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/search/CampusDirectoryAdapter.smali base/smali_classes5/com/groupme/android/group/directory/search/CampusDirectoryAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/search/CampusDirectoryAdapter.smali	2026-05-11 14:55:21.036366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/search/CampusDirectoryAdapter.smali	2026-05-17 19:36:02.428158940 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/search/CampusDirectoryAdapter.smali	2026-07-16 20:24:33.374565488 -0400
 @@ -732,6 +732,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2903,7 +2903,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/group/directory/search/CampusDirectoryAdapter$ListUserViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/search/CampusHomePillAdapter.smali base/smali_classes5/com/groupme/android/group/directory/search/CampusHomePillAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/search/CampusHomePillAdapter.smali	2026-05-11 14:55:21.032366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/search/CampusHomePillAdapter.smali	2026-05-17 19:36:02.428158940 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/search/CampusHomePillAdapter.smali	2026-07-16 20:24:33.374565488 -0400
 @@ -422,6 +422,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2914,7 +2914,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/search/DirectoryUserCarouselAdapter.smali base/smali_classes5/com/groupme/android/group/directory/search/DirectoryUserCarouselAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/search/DirectoryUserCarouselAdapter.smali	2026-05-11 14:55:21.012366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/search/DirectoryUserCarouselAdapter.smali	2026-05-17 19:36:02.432158940 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/search/DirectoryUserCarouselAdapter.smali	2026-07-16 20:24:33.374565488 -0400
 @@ -200,6 +200,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2925,7 +2925,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/directory/search/DiscoverCategoryPillAdapter.smali base/smali_classes5/com/groupme/android/group/directory/search/DiscoverCategoryPillAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/directory/search/DiscoverCategoryPillAdapter.smali	2026-05-11 14:55:21.016366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/directory/search/DiscoverCategoryPillAdapter.smali	2026-05-17 19:36:02.432158940 -0400
++++ base/smali_classes5/com/groupme/android/group/directory/search/DiscoverCategoryPillAdapter.smali	2026-07-16 20:24:33.378565488 -0400
 @@ -237,6 +237,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2936,7 +2936,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/group/directory/search/DiscoverCategoryPillAdapter$PillViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/join_requests/PendingMembershipAdapter.smali base/smali_classes5/com/groupme/android/group/join_requests/PendingMembershipAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/join_requests/PendingMembershipAdapter.smali	2026-05-11 14:55:21.212366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/join_requests/PendingMembershipAdapter.smali	2026-05-17 19:37:31.736158905 -0400
++++ base/smali_classes5/com/groupme/android/group/join_requests/PendingMembershipAdapter.smali	2026-07-16 20:24:33.378565488 -0400
 @@ -130,5 +130,7 @@
  
      invoke-direct {p1, p0}, Lcom/groupme/android/group/join_requests/PendingMembershipAdapter$PendingMembershipViewHolder;-><init>(Lcom/groupme/android/databinding/ItemJoinRequestBinding;)V
@@ -2947,7 +2947,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  .end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/join_requests/PendingReceivedRequestsAdapter.smali base/smali_classes5/com/groupme/android/group/join_requests/PendingReceivedRequestsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/join_requests/PendingReceivedRequestsAdapter.smali	2026-05-11 14:55:21.220366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/join_requests/PendingReceivedRequestsAdapter.smali	2026-05-17 19:38:05.312158893 -0400
++++ base/smali_classes5/com/groupme/android/group/join_requests/PendingReceivedRequestsAdapter.smali	2026-07-16 20:24:33.378565488 -0400
 @@ -140,6 +140,8 @@
  
      invoke-direct {p1, p0}, Lcom/groupme/android/group/join_requests/PendingReceivedRequestsAdapter$PendingRequestsViewHolder;-><init>(Lcom/groupme/android/databinding/ItemPendingReceivedRequestBinding;)V
@@ -2959,7 +2959,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/join_requests/PendingSentRequestsAdapter.smali base/smali_classes5/com/groupme/android/group/join_requests/PendingSentRequestsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/join_requests/PendingSentRequestsAdapter.smali	2026-05-11 14:55:21.232366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/join_requests/PendingSentRequestsAdapter.smali	2026-05-17 19:38:16.504158888 -0400
++++ base/smali_classes5/com/groupme/android/group/join_requests/PendingSentRequestsAdapter.smali	2026-07-16 20:24:33.378565488 -0400
 @@ -140,6 +140,8 @@
  
      invoke-direct {p1, p0}, Lcom/groupme/android/group/join_requests/PendingSentRequestsAdapter$PendingRequestsViewHolder;-><init>(Lcom/groupme/android/databinding/ItemPendingSentRequestBinding;)V
@@ -2971,7 +2971,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/member/FormerMembersAdapter.smali base/smali_classes5/com/groupme/android/group/member/FormerMembersAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/member/FormerMembersAdapter.smali	2026-05-11 14:55:21.248366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/member/FormerMembersAdapter.smali	2026-05-17 19:36:02.436158940 -0400
++++ base/smali_classes5/com/groupme/android/group/member/FormerMembersAdapter.smali	2026-07-16 20:24:33.382565488 -0400
 @@ -1240,6 +1240,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -2982,7 +2982,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/group/member/FormerMembersAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/member/MembersAdapter.smali base/smali_classes5/com/groupme/android/group/member/MembersAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/member/MembersAdapter.smali	2026-05-11 14:55:21.276366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/member/MembersAdapter.smali	2026-05-17 19:36:02.436158940 -0400
++++ base/smali_classes5/com/groupme/android/group/member/MembersAdapter.smali	2026-07-16 20:24:33.382565488 -0400
 @@ -998,6 +998,7 @@
      invoke-virtual {v0, p0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3009,7 +3009,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/group/member/MembersAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/member/MembersBottomSheetFragment.smali base/smali_classes5/com/groupme/android/group/member/MembersBottomSheetFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/group/member/MembersBottomSheetFragment.smali	2026-05-11 14:55:21.260366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/member/MembersBottomSheetFragment.smali	2026-05-17 19:45:40.680158719 -0400
++++ base/smali_classes5/com/groupme/android/group/member/MembersBottomSheetFragment.smali	2026-07-16 20:24:33.382565488 -0400
 @@ -261,6 +261,8 @@
      .line 59
      invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
@@ -3021,7 +3021,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/member/MembersFragment.smali base/smali_classes5/com/groupme/android/group/member/MembersFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/group/member/MembersFragment.smali	2026-05-11 14:55:21.272366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/member/MembersFragment.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/group/member/MembersFragment.smali	2026-07-16 20:24:33.382565488 -0400
 @@ -1086,6 +1086,10 @@
  
      invoke-virtual {p2, v0, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
@@ -3035,7 +3035,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/member/RecentContactsAdapter.smali base/smali_classes5/com/groupme/android/group/member/RecentContactsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/member/RecentContactsAdapter.smali	2026-05-11 14:55:21.272366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/member/RecentContactsAdapter.smali	2026-05-17 19:36:02.436158940 -0400
++++ base/smali_classes5/com/groupme/android/group/member/RecentContactsAdapter.smali	2026-07-16 20:24:33.382565488 -0400
 @@ -627,6 +627,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3046,7 +3046,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/group/member/RecentContactsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/member/RecentGroupsAdapter.smali base/smali_classes5/com/groupme/android/group/member/RecentGroupsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/member/RecentGroupsAdapter.smali	2026-05-11 14:55:21.272366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/member/RecentGroupsAdapter.smali	2026-05-17 19:36:02.436158940 -0400
++++ base/smali_classes5/com/groupme/android/group/member/RecentGroupsAdapter.smali	2026-07-16 20:24:33.386565488 -0400
 @@ -201,6 +201,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3057,7 +3057,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/group/member/RecentGroupsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/member/StartNewChatItemsAdapter.smali base/smali_classes5/com/groupme/android/group/member/StartNewChatItemsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/member/StartNewChatItemsAdapter.smali	2026-05-11 14:55:21.284366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/member/StartNewChatItemsAdapter.smali	2026-05-17 19:36:02.440158940 -0400
++++ base/smali_classes5/com/groupme/android/group/member/StartNewChatItemsAdapter.smali	2026-07-16 20:24:33.386565488 -0400
 @@ -184,7 +184,7 @@
  .end method
  
@@ -3180,7 +3180,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/popular/adapter/HighlightsMessageListAdapter.smali base/smali_classes5/com/groupme/android/group/popular/adapter/HighlightsMessageListAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/popular/adapter/HighlightsMessageListAdapter.smali	2026-05-11 14:55:21.288366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/popular/adapter/HighlightsMessageListAdapter.smali	2026-05-17 19:38:56.756158873 -0400
++++ base/smali_classes5/com/groupme/android/group/popular/adapter/HighlightsMessageListAdapter.smali	2026-07-16 20:24:33.386565488 -0400
 @@ -1782,6 +1782,8 @@
  
      move-result-object p0
@@ -3210,7 +3210,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/popular/view/HighlightsBaseFragment.smali base/smali_classes5/com/groupme/android/group/popular/view/HighlightsBaseFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/group/popular/view/HighlightsBaseFragment.smali	2026-05-11 14:55:21.296366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/popular/view/HighlightsBaseFragment.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/group/popular/view/HighlightsBaseFragment.smali	2026-07-16 20:24:33.390565488 -0400
 @@ -617,6 +617,16 @@
  
      move-object/from16 v7, p0
@@ -3230,7 +3230,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/popular/view/PopularBottomSheetFragment.smali base/smali_classes5/com/groupme/android/group/popular/view/PopularBottomSheetFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/group/popular/view/PopularBottomSheetFragment.smali	2026-05-11 14:55:21.300366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/popular/view/PopularBottomSheetFragment.smali	2026-05-17 19:46:03.604158710 -0400
++++ base/smali_classes5/com/groupme/android/group/popular/view/PopularBottomSheetFragment.smali	2026-07-16 20:24:33.390565488 -0400
 @@ -201,6 +201,8 @@
      .line 58
      invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
@@ -3242,7 +3242,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/settings/GroupSettingsMessageCopilotFragment.smali base/smali_classes5/com/groupme/android/group/settings/GroupSettingsMessageCopilotFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/group/settings/GroupSettingsMessageCopilotFragment.smali	2026-05-11 14:55:21.324366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/settings/GroupSettingsMessageCopilotFragment.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/group/settings/GroupSettingsMessageCopilotFragment.smali	2026-07-16 20:24:33.390565488 -0400
 @@ -215,6 +215,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -3257,7 +3257,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      .line 36
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/settings/InChatNotificationVisibilityBottomSheet.smali base/smali_classes5/com/groupme/android/group/settings/InChatNotificationVisibilityBottomSheet.smali
 --- base_clean/smali_classes5/com/groupme/android/group/settings/InChatNotificationVisibilityBottomSheet.smali	2026-05-11 14:55:21.344366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/settings/InChatNotificationVisibilityBottomSheet.smali	2026-05-17 19:46:16.104158705 -0400
++++ base/smali_classes5/com/groupme/android/group/settings/InChatNotificationVisibilityBottomSheet.smali	2026-07-16 20:24:33.390565488 -0400
 @@ -680,6 +680,8 @@
      .line 75
      invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
@@ -3269,7 +3269,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/theme/CategoryAdapter.smali base/smali_classes5/com/groupme/android/group/theme/CategoryAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/theme/CategoryAdapter.smali	2026-05-11 14:55:21.348366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/theme/CategoryAdapter.smali	2026-05-17 19:36:02.440158940 -0400
++++ base/smali_classes5/com/groupme/android/group/theme/CategoryAdapter.smali	2026-07-16 20:24:33.390565488 -0400
 @@ -224,6 +224,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3280,7 +3280,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/group/theme/CategoryAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/theme/ThemeTemplateAdapter.smali base/smali_classes5/com/groupme/android/group/theme/ThemeTemplateAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/group/theme/ThemeTemplateAdapter.smali	2026-05-11 14:55:21.348366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/theme/ThemeTemplateAdapter.smali	2026-05-17 19:36:02.440158940 -0400
++++ base/smali_classes5/com/groupme/android/group/theme/ThemeTemplateAdapter.smali	2026-07-16 20:24:33.394565488 -0400
 @@ -243,6 +243,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3291,7 +3291,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p2, Lcom/groupme/android/group/theme/ThemeTemplateAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/group/views/custom/TopLevelEventGroupBadgeView.smali base/smali_classes5/com/groupme/android/group/views/custom/TopLevelEventGroupBadgeView.smali
 --- base_clean/smali_classes5/com/groupme/android/group/views/custom/TopLevelEventGroupBadgeView.smali	2026-05-11 14:55:21.372366691 -0400
-+++ base/smali_classes5/com/groupme/android/group/views/custom/TopLevelEventGroupBadgeView.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/group/views/custom/TopLevelEventGroupBadgeView.smali	2026-07-16 20:24:33.394565488 -0400
 @@ -433,3 +433,40 @@
  
      return-void
@@ -3335,7 +3335,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/image/AvatarView.smali base/smali_classes5/com/groupme/android/image/AvatarView.smali
 --- base_clean/smali_classes5/com/groupme/android/image/AvatarView.smali	2026-05-11 14:55:21.368366691 -0400
-+++ base/smali_classes5/com/groupme/android/image/AvatarView.smali	2026-05-17 18:39:52.000160225 -0400
++++ base/smali_classes5/com/groupme/android/image/AvatarView.smali	2026-07-16 20:24:33.394565488 -0400
 @@ -1138,3 +1138,103 @@
  
      return-void
@@ -3442,7 +3442,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedImagesAdapter.smali base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedImagesAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedImagesAdapter.smali	2026-05-11 14:55:21.476366691 -0400
-+++ base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedImagesAdapter.smali	2026-05-17 19:36:02.444158940 -0400
++++ base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedImagesAdapter.smali	2026-07-16 20:24:33.398565488 -0400
 @@ -232,6 +232,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3453,7 +3453,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/image/picker/media_search/bing/BingCuratedImagesAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedVideosAdapter.smali base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedVideosAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedVideosAdapter.smali	2026-05-11 14:55:21.476366691 -0400
-+++ base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedVideosAdapter.smali	2026-05-17 19:36:02.444158940 -0400
++++ base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingCuratedVideosAdapter.smali	2026-07-16 20:24:33.398565488 -0400
 @@ -175,6 +175,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3464,7 +3464,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/image/picker/media_search/bing/BingCuratedVideosAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingImageAdapter.smali base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingImageAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingImageAdapter.smali	2026-05-11 14:55:21.476366691 -0400
-+++ base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingImageAdapter.smali	2026-05-17 19:36:02.444158940 -0400
++++ base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingImageAdapter.smali	2026-07-16 20:24:33.398565488 -0400
 @@ -484,6 +484,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3475,7 +3475,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/image/picker/media_search/bing/BingImageAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingVideoAdapter.smali base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingVideoAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingVideoAdapter.smali	2026-05-11 14:55:21.488366691 -0400
-+++ base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingVideoAdapter.smali	2026-05-17 19:36:02.444158940 -0400
++++ base/smali_classes5/com/groupme/android/image/picker/media_search/bing/BingVideoAdapter.smali	2026-07-16 20:24:33.398565488 -0400
 @@ -384,6 +384,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3486,7 +3486,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/image/picker/media_search/bing/BingVideoAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphyCuratedResultsAdapter.smali base/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphyCuratedResultsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphyCuratedResultsAdapter.smali	2026-05-11 14:55:21.500366691 -0400
-+++ base/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphyCuratedResultsAdapter.smali	2026-05-17 19:36:02.444158940 -0400
++++ base/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphyCuratedResultsAdapter.smali	2026-07-16 20:24:33.398565488 -0400
 @@ -247,6 +247,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3497,7 +3497,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/image/picker/media_search/giphy/GiphyCuratedResultsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphySearchResultsAdapter.smali base/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphySearchResultsAdapter.smali
 --- base_clean/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphySearchResultsAdapter.smali	2026-05-11 14:55:21.500366691 -0400
-+++ base/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphySearchResultsAdapter.smali	2026-05-17 19:36:02.444158940 -0400
++++ base/smali_classes5/com/groupme/android/image/picker/media_search/giphy/GiphySearchResultsAdapter.smali	2026-07-16 20:24:33.398565488 -0400
 @@ -361,6 +361,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -3508,7 +3508,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
      new-instance p1, Lcom/groupme/android/image/picker/media_search/giphy/GiphySearchResultsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/groupme/android/login/LoginFragment.smali base/smali_classes5/com/groupme/android/login/LoginFragment.smali
 --- base_clean/smali_classes5/com/groupme/android/login/LoginFragment.smali	2026-05-11 14:55:21.524366691 -0400
-+++ base/smali_classes5/com/groupme/android/login/LoginFragment.smali	2026-05-17 18:39:52.004160225 -0400
++++ base/smali_classes5/com/groupme/android/login/LoginFragment.smali	2026-07-16 20:24:33.402565488 -0400
 @@ -956,6 +956,10 @@
  
      check-cast v1, Landroid/widget/FrameLayout;
@@ -3544,7 +3544,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes5/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$ContextMenuClick.smali base/smali_classes6/com/groupme/android/dpad/KgmDpad$ContextMenuClick.smali
 --- base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$ContextMenuClick.smali	1969-12-31 19:00:00.000000000 -0500
-+++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$ContextMenuClick.smali	2026-05-17 19:33:07.776159006 -0400
++++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$ContextMenuClick.smali	2026-07-16 20:24:33.402565488 -0400
 @@ -0,0 +1,42 @@
 +.class public final Lcom/groupme/android/dpad/KgmDpad$ContextMenuClick;
 +.super Ljava/lang/Object;
@@ -3590,7 +3590,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$DialogShowFocus.smali base/smali_classes6/com/groupme/android/dpad/KgmDpad$DialogShowFocus.smali
 --- base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$DialogShowFocus.smali	1969-12-31 19:00:00.000000000 -0500
-+++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$DialogShowFocus.smali	2026-05-17 19:45:00.724158734 -0400
++++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$DialogShowFocus.smali	2026-07-16 20:24:33.402565488 -0400
 @@ -0,0 +1,63 @@
 +.class public final Lcom/groupme/android/dpad/KgmDpad$DialogShowFocus;
 +.super Ljava/lang/Object;
@@ -3657,7 +3657,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$LikeMenuClick.smali base/smali_classes6/com/groupme/android/dpad/KgmDpad$LikeMenuClick.smali
 --- base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$LikeMenuClick.smali	1969-12-31 19:00:00.000000000 -0500
-+++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$LikeMenuClick.smali	2026-05-18 03:13:52.516148461 -0400
++++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$LikeMenuClick.smali	2026-07-16 20:24:33.402565488 -0400
 @@ -0,0 +1,57 @@
 +.class public final Lcom/groupme/android/dpad/KgmDpad$LikeMenuClick;
 +.super Ljava/lang/Object;
@@ -3718,7 +3718,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$OnReorder.smali base/smali_classes6/com/groupme/android/dpad/KgmDpad$OnReorder.smali
 --- base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$OnReorder.smali	1969-12-31 19:00:00.000000000 -0500
-+++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$OnReorder.smali	2026-05-17 19:33:50.700158990 -0400
++++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$OnReorder.smali	2026-07-16 20:24:33.402565488 -0400
 @@ -0,0 +1,20 @@
 +.class public interface abstract Lcom/groupme/android/dpad/KgmDpad$OnReorder;
 +.super Ljava/lang/Object;
@@ -3742,7 +3742,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$Pager2KeyListener.smali base/smali_classes6/com/groupme/android/dpad/KgmDpad$Pager2KeyListener.smali
 --- base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$Pager2KeyListener.smali	1969-12-31 19:00:00.000000000 -0500
-+++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$Pager2KeyListener.smali	2026-05-17 19:33:43.268158993 -0400
++++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$Pager2KeyListener.smali	2026-07-16 20:24:33.402565488 -0400
 @@ -0,0 +1,117 @@
 +.class public final Lcom/groupme/android/dpad/KgmDpad$Pager2KeyListener;
 +.super Ljava/lang/Object;
@@ -3863,7 +3863,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$PagerKeyListener.smali base/smali_classes6/com/groupme/android/dpad/KgmDpad$PagerKeyListener.smali
 --- base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$PagerKeyListener.smali	1969-12-31 19:00:00.000000000 -0500
-+++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$PagerKeyListener.smali	2026-05-17 19:33:27.000158999 -0400
++++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$PagerKeyListener.smali	2026-07-16 20:24:33.402565488 -0400
 @@ -0,0 +1,118 @@
 +.class public final Lcom/groupme/android/dpad/KgmDpad$PagerKeyListener;
 +.super Ljava/lang/Object;
@@ -3985,7 +3985,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$ReorderKeyListener.smali base/smali_classes6/com/groupme/android/dpad/KgmDpad$ReorderKeyListener.smali
 --- base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad$ReorderKeyListener.smali	1969-12-31 19:00:00.000000000 -0500
-+++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$ReorderKeyListener.smali	2026-05-17 19:34:12.704158981 -0400
++++ base/smali_classes6/com/groupme/android/dpad/KgmDpad$ReorderKeyListener.smali	2026-07-16 20:24:33.402565488 -0400
 @@ -0,0 +1,95 @@
 +.class public final Lcom/groupme/android/dpad/KgmDpad$ReorderKeyListener;
 +.super Ljava/lang/Object;
@@ -4084,7 +4084,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad.smali base/smali_classes6/com/groupme/android/dpad/KgmDpad.smali
 --- base_clean/smali_classes6/com/groupme/android/dpad/KgmDpad.smali	1969-12-31 19:00:00.000000000 -0500
-+++ base/smali_classes6/com/groupme/android/dpad/KgmDpad.smali	2026-05-18 03:14:02.124148457 -0400
++++ base/smali_classes6/com/groupme/android/dpad/KgmDpad.smali	2026-07-16 20:24:33.402565488 -0400
 @@ -0,0 +1,411 @@
 +.class public Lcom/groupme/android/dpad/KgmDpad;
 +.super Ljava/lang/Object;
@@ -4499,7 +4499,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/notification/BaseNotification.smali base/smali_classes6/com/groupme/android/notification/BaseNotification.smali
 --- base_clean/smali_classes6/com/groupme/android/notification/BaseNotification.smali	2026-05-11 14:55:06.880366697 -0400
-+++ base/smali_classes6/com/groupme/android/notification/BaseNotification.smali	2026-05-17 18:39:52.004160225 -0400
++++ base/smali_classes6/com/groupme/android/notification/BaseNotification.smali	2026-07-16 20:24:33.406565488 -0400
 @@ -633,6 +633,8 @@
  
      move-result-object v2
@@ -4511,7 +4511,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 85
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/notification/ConversationMentionNotification.smali base/smali_classes6/com/groupme/android/notification/ConversationMentionNotification.smali
 --- base_clean/smali_classes6/com/groupme/android/notification/ConversationMentionNotification.smali	2026-05-11 14:55:07.192366697 -0400
-+++ base/smali_classes6/com/groupme/android/notification/ConversationMentionNotification.smali	2026-05-17 18:39:52.004160225 -0400
++++ base/smali_classes6/com/groupme/android/notification/ConversationMentionNotification.smali	2026-07-16 20:24:33.406565488 -0400
 @@ -493,6 +493,7 @@
      if-eqz v1, :cond_1
  
@@ -4538,7 +4538,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 266
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/notification/ConversationMessageNotification.smali base/smali_classes6/com/groupme/android/notification/ConversationMessageNotification.smali
 --- base_clean/smali_classes6/com/groupme/android/notification/ConversationMessageNotification.smali	2026-05-11 14:55:07.348366697 -0400
-+++ base/smali_classes6/com/groupme/android/notification/ConversationMessageNotification.smali	2026-05-17 18:39:52.004160225 -0400
++++ base/smali_classes6/com/groupme/android/notification/ConversationMessageNotification.smali	2026-07-16 20:24:33.410565488 -0400
 @@ -785,6 +785,7 @@
      invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
  
@@ -4549,7 +4549,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 407
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/notification/SingleMessageNotification.smali base/smali_classes6/com/groupme/android/notification/SingleMessageNotification.smali
 --- base_clean/smali_classes6/com/groupme/android/notification/SingleMessageNotification.smali	2026-05-11 14:55:07.612366696 -0400
-+++ base/smali_classes6/com/groupme/android/notification/SingleMessageNotification.smali	2026-05-17 18:39:52.004160225 -0400
++++ base/smali_classes6/com/groupme/android/notification/SingleMessageNotification.smali	2026-07-16 20:24:33.410565488 -0400
 @@ -1416,6 +1416,7 @@
      move-result-object p0
  
@@ -4558,9 +4558,107 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      invoke-virtual {p0, v1}, Landroidx/core/app/Person$Builder;->setIcon(Landroidx/core/graphics/drawable/IconCompat;)Landroidx/core/app/Person$Builder;
  
      move-result-object p0
+diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/notification/SnoozeMessageReceiver.smali base/smali_classes6/com/groupme/android/notification/SnoozeMessageReceiver.smali
+--- base_clean/smali_classes6/com/groupme/android/notification/SnoozeMessageReceiver.smali	2026-05-11 14:55:07.468366697 -0400
++++ base/smali_classes6/com/groupme/android/notification/SnoozeMessageReceiver.smali	2026-07-16 20:24:57.198565479 -0400
+@@ -46,52 +46,69 @@
+ 
+ # virtual methods
+ .method public final synthetic lambda$snoozeConversationAndDismissNotification$0(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;I)V
+-    .locals 9
++    .locals 5
+ 
+-    const/4 v7, 0x0
++    # KGM: replace mute with mark-as-read
++    # p1 = context, p2 = conversationId, p3 = parentId, p4 = conversationName, p5 = conversationType
++    # p6 = notificationTag, p7 = notificationId
+ 
+-    .line 44
+-    sget-object v8, Lcom/groupme/mixpanel/event/engagement/ManageGroupEvent$ManageGroupEntryPoint;->Notifications:Lcom/groupme/mixpanel/event/engagement/ManageGroupEvent$ManageGroupEntryPoint;
++    # Step 1: markIndividualChatCompletelyRead updates last_viewed_at which filters notifications_view
++    const/4 v4, 0x1
+ 
+-    const/16 v5, 0x3c
++    invoke-static {p1, p5, p2, p3, v4}, Lcom/groupme/android/util/MarkAsReadUtils;->markIndividualChatCompletelyRead(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Z)V
+ 
+-    const/4 v6, 0x0
++    # Step 2: For DMs (conversationType == 1), send ReadReceiptRequest to server
++    const/4 v0, 0x1
+ 
+-    move-object v0, p1
++    if-ne p5, v0, :skip_dm_receipt
+ 
+-    move-object v1, p2
++    invoke-static {p1}, Lcom/groupme/android/util/PreferencesUtils;->isSendReadReceiptsEnabled(Landroid/content/Context;)Z
+ 
+-    move-object v2, p3
++    move-result v0
+ 
+-    move-object v3, p4
++    if-eqz v0, :skip_dm_receipt
+ 
+-    move v4, p5
++    new-instance v0, Lcom/groupme/android/chat/ReadReceiptRequest;
+ 
+-    invoke-static/range {v0 .. v8}, Lcom/groupme/android/conversation/MuteUtils;->muteConversationUntil(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZZLcom/groupme/mixpanel/event/engagement/ManageGroupEvent$ManageGroupEntryPoint;)Ljava/lang/Long;
++    const/4 v1, 0x0
+ 
+-    move-result-object p2
++    invoke-direct {v0, p1, p2, v1}, Lcom/groupme/android/chat/ReadReceiptRequest;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/volley/Response$ErrorListener;)V
+ 
+-    if-eqz p2, :cond_0
++    invoke-static {}, Lcom/groupme/android/VolleyClient;->getInstance()Lcom/groupme/android/VolleyClient;
+ 
+-    const/4 p2, 0x1
++    move-result-object v1
+ 
+-    goto :goto_0
++    invoke-virtual {v1, p1}, Lcom/groupme/android/VolleyClient;->getRequestQueue(Landroid/content/Context;)Lcom/android/volley/RequestQueue;
+ 
+-    :cond_0
+-    const/4 p2, 0x0
++    move-result-object v1
+ 
+-    .line 46
+-    :goto_0
++    invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
++
++    :skip_dm_receipt
++
++    # Step 3: Run UpdateNotificationsTask to refresh remaining notifications
++    new-instance v0, Lcom/groupme/android/notification/UpdateNotificationsTask;
++
++    invoke-direct {v0}, Lcom/groupme/android/notification/UpdateNotificationsTask;-><init>()V
++
++    new-instance v1, Lcom/groupme/android/notification/UpdateNotificationsTask$Param;
++
++    invoke-direct {v1, p1}, Lcom/groupme/android/notification/UpdateNotificationsTask$Param;-><init>(Landroid/content/Context;)V
++
++    filled-new-array {v1}, [Lcom/groupme/android/notification/UpdateNotificationsTask$Param;
++
++    move-result-object v1
++
++    invoke-virtual {v0, v1}, Lcom/groupme/util/BaseAsyncTask;->start([Ljava/lang/Object;)Landroid/os/AsyncTask;
++
++    # Step 4: Dismiss the notification immediately
+     invoke-static {p1}, Landroidx/core/app/NotificationManagerCompat;->from(Landroid/content/Context;)Landroidx/core/app/NotificationManagerCompat;
+ 
+-    move-result-object p3
++    move-result-object v0
+ 
+     move/from16 v1, p7
+ 
+-    invoke-virtual {p3, p6, v1}, Landroidx/core/app/NotificationManagerCompat;->cancel(Ljava/lang/String;I)V
+-
+-    .line 47
+-    invoke-virtual {p0, p1, p2, p5, p4}, Lcom/groupme/android/notification/SnoozeMessageReceiver;->showDMSnoozeToast(Landroid/content/Context;ZILjava/lang/String;)V
++    invoke-virtual {v0, p6, v1}, Landroidx/core/app/NotificationManagerCompat;->cancel(Ljava/lang/String;I)V
+ 
+     return-void
+ .end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/onboard/OnboardActivity.smali base/smali_classes6/com/groupme/android/onboard/OnboardActivity.smali
 --- base_clean/smali_classes6/com/groupme/android/onboard/OnboardActivity.smali	2026-05-11 14:55:07.548366696 -0400
-+++ base/smali_classes6/com/groupme/android/onboard/OnboardActivity.smali	2026-05-17 19:47:48.368158670 -0400
++++ base/smali_classes6/com/groupme/android/onboard/OnboardActivity.smali	2026-07-16 20:24:33.410565488 -0400
 @@ -627,6 +627,8 @@
  
      iput-object p1, p0, Lcom/groupme/android/onboard/OnboardActivity;->mPager:Landroidx/viewpager/widget/ViewPager;
@@ -4572,7 +4670,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 125
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter$KgmReorder.smali base/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter$KgmReorder.smali
 --- base_clean/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter$KgmReorder.smali	1969-12-31 19:00:00.000000000 -0500
-+++ base/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter$KgmReorder.smali	2026-05-18 03:16:54.156148391 -0400
++++ base/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter$KgmReorder.smali	2026-07-16 20:24:33.414565488 -0400
 @@ -0,0 +1,66 @@
 +.class public final Lcom/groupme/android/powerup/emoji/management/EmojiManagementAdapter$KgmReorder;
 +.super Ljava/lang/Object;
@@ -4642,7 +4740,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter.smali base/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter.smali	2026-05-11 14:55:07.684366696 -0400
-+++ base/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter.smali	2026-05-18 03:17:20.972148381 -0400
++++ base/smali_classes6/com/groupme/android/powerup/emoji/management/EmojiManagementAdapter.smali	2026-07-16 20:24:33.414565488 -0400
 @@ -333,25 +333,34 @@
  .end method
  
@@ -4694,7 +4792,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/powerup/emoji/management/EmojiManagementAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/profile/InterestListAdapter.smali base/smali_classes6/com/groupme/android/profile/InterestListAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/profile/InterestListAdapter.smali	2026-05-11 14:55:07.916366696 -0400
-+++ base/smali_classes6/com/groupme/android/profile/InterestListAdapter.smali	2026-05-17 19:36:02.448158940 -0400
++++ base/smali_classes6/com/groupme/android/profile/InterestListAdapter.smali	2026-07-16 20:24:33.414565488 -0400
 @@ -584,6 +584,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -4705,7 +4803,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/profile/InterestListAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/profile/OwnedGroupsAdapter.smali base/smali_classes6/com/groupme/android/profile/OwnedGroupsAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/profile/OwnedGroupsAdapter.smali	2026-05-11 14:55:07.936366696 -0400
-+++ base/smali_classes6/com/groupme/android/profile/OwnedGroupsAdapter.smali	2026-05-17 19:36:02.452158940 -0400
++++ base/smali_classes6/com/groupme/android/profile/OwnedGroupsAdapter.smali	2026-07-16 20:24:33.414565488 -0400
 @@ -186,6 +186,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -4716,7 +4814,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/profile/OwnedGroupsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/profile/ProfileFragment.smali base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali
 --- base_clean/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-11 14:55:08.472366696 -0400
-+++ base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-05-17 18:39:52.004160225 -0400
++++ base/smali_classes6/com/groupme/android/profile/ProfileFragment.smali	2026-07-16 20:24:33.418565488 -0400
 @@ -6142,6 +6142,8 @@
  
      iput-object v0, p0, Lcom/groupme/android/profile/ProfileFragment;->mCTALayout:Landroid/view/View;
@@ -4991,7 +5089,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/profile/ProfileInterestsAdapter.smali base/smali_classes6/com/groupme/android/profile/ProfileInterestsAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/profile/ProfileInterestsAdapter.smali	2026-05-11 14:55:08.124366696 -0400
-+++ base/smali_classes6/com/groupme/android/profile/ProfileInterestsAdapter.smali	2026-05-17 19:36:02.452158940 -0400
++++ base/smali_classes6/com/groupme/android/profile/ProfileInterestsAdapter.smali	2026-07-16 20:24:33.418565488 -0400
 @@ -668,6 +668,7 @@
      invoke-virtual {p2, p0, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5002,7 +5100,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/profile/ProfileInterestsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/relationship/StartDMFragment.smali base/smali_classes6/com/groupme/android/relationship/StartDMFragment.smali
 --- base_clean/smali_classes6/com/groupme/android/relationship/StartDMFragment.smali	2026-05-11 14:55:08.484366696 -0400
-+++ base/smali_classes6/com/groupme/android/relationship/StartDMFragment.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/relationship/StartDMFragment.smali	2026-07-16 20:24:33.422565488 -0400
 @@ -456,11 +456,7 @@
  
      .line 208
@@ -5030,7 +5128,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      :goto_0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali base/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali
 --- base_clean/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali	2026-05-11 14:55:08.492366696 -0400
-+++ base/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/settings/BasicWebviewActivity.smali	2026-07-16 20:24:33.422565488 -0400
 @@ -37,7 +37,12 @@
      .line 19
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -5046,7 +5144,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/settings/GlobalPreferences.smali base/smali_classes6/com/groupme/android/settings/GlobalPreferences.smali
 --- base_clean/smali_classes6/com/groupme/android/settings/GlobalPreferences.smali	2026-05-11 14:55:08.780366696 -0400
-+++ base/smali_classes6/com/groupme/android/settings/GlobalPreferences.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/settings/GlobalPreferences.smali	2026-07-16 20:24:33.422565488 -0400
 @@ -178,27 +178,11 @@
  .end method
  
@@ -5089,7 +5187,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      if-nez v0, :cond_0
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/sharing/ShareInterstitialActivity.smali base/smali_classes6/com/groupme/android/sharing/ShareInterstitialActivity.smali
 --- base_clean/smali_classes6/com/groupme/android/sharing/ShareInterstitialActivity.smali	2026-05-11 14:55:08.628366696 -0400
-+++ base/smali_classes6/com/groupme/android/sharing/ShareInterstitialActivity.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/sharing/ShareInterstitialActivity.smali	2026-07-16 20:24:33.422565488 -0400
 @@ -1392,6 +1392,25 @@
  
      iput-object p1, p0, Lcom/groupme/android/sharing/ShareInterstitialActivity;->shareStickerImageView:Landroid/widget/ImageView;
@@ -5141,7 +5239,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/sharing/ShareOptionsAdapter.smali base/smali_classes6/com/groupme/android/sharing/ShareOptionsAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/sharing/ShareOptionsAdapter.smali	2026-05-11 14:55:08.660366696 -0400
-+++ base/smali_classes6/com/groupme/android/sharing/ShareOptionsAdapter.smali	2026-05-17 19:36:02.452158940 -0400
++++ base/smali_classes6/com/groupme/android/sharing/ShareOptionsAdapter.smali	2026-07-16 20:24:33.422565488 -0400
 @@ -506,6 +506,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5152,7 +5250,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/sharing/ShareOptionsAdapter$ItemViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/sharing/views/ShareCarouselAdapter.smali base/smali_classes6/com/groupme/android/sharing/views/ShareCarouselAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/sharing/views/ShareCarouselAdapter.smali	2026-05-11 14:55:08.740366696 -0400
-+++ base/smali_classes6/com/groupme/android/sharing/views/ShareCarouselAdapter.smali	2026-05-17 19:39:16.884158865 -0400
++++ base/smali_classes6/com/groupme/android/sharing/views/ShareCarouselAdapter.smali	2026-07-16 20:24:33.426565488 -0400
 @@ -399,5 +399,7 @@
  
      invoke-direct {p1, p0}, Lcom/groupme/android/sharing/views/ShareCarouselAdapter$ShareViewHolder;-><init>(Landroid/view/View;)V
@@ -5163,7 +5261,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
  .end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/FeedbackFragment.smali base/smali_classes6/com/groupme/android/support/FeedbackFragment.smali
 --- base_clean/smali_classes6/com/groupme/android/support/FeedbackFragment.smali	2026-05-11 14:55:08.780366696 -0400
-+++ base/smali_classes6/com/groupme/android/support/FeedbackFragment.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/support/FeedbackFragment.smali	2026-07-16 20:24:33.426565488 -0400
 @@ -273,6 +273,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -5178,7 +5276,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali base/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali
 --- base_clean/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali	2026-05-11 14:55:08.860366696 -0400
-+++ base/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/support/HelpAndFeedbackActivity.smali	2026-07-16 20:24:33.426565488 -0400
 @@ -30,7 +30,12 @@
      .line 20
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -5194,7 +5292,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      invoke-virtual {p0, v0}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali base/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali
 --- base_clean/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali	2026-05-11 14:55:08.804366696 -0400
-+++ base/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/support/HelpFeedbackFragment.smali	2026-07-16 20:24:33.426565488 -0400
 @@ -480,6 +480,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -5209,7 +5307,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali base/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali
 --- base_clean/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali	2026-05-11 14:55:08.856366696 -0400
-+++ base/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/support/NpsSurveyActivity.smali	2026-07-16 20:24:33.426565488 -0400
 @@ -224,7 +224,12 @@
      .line 41
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -5225,7 +5323,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali base/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali
 --- base_clean/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali	2026-05-11 14:55:08.840366696 -0400
-+++ base/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/support/ReportAbuseActivity.smali	2026-07-16 20:24:33.430565488 -0400
 @@ -178,7 +178,12 @@
      .line 61
      invoke-super {p0, p1}, Lcom/groupme/android/base/BaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -5241,7 +5339,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      invoke-virtual {p0, p1}, Lcom/groupme/android/base/BaseActivity;->setContentView(I)V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarActivity.smali base/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarActivity.smali
 --- base_clean/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarActivity.smali	2026-05-11 14:55:09.028366696 -0400
-+++ base/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarActivity.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarActivity.smali	2026-07-16 20:24:33.430565488 -0400
 @@ -63,6 +63,10 @@
      .line 23
      invoke-super {p0, p1}, Lcom/groupme/android/usercalendar/view/Hilt_UserCalendarActivity;->onCreate(Landroid/os/Bundle;)V
@@ -5255,7 +5353,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarFragment.smali base/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarFragment.smali
 --- base_clean/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarFragment.smali	2026-05-11 14:55:09.136366696 -0400
-+++ base/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarFragment.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/usercalendar/view/UserCalendarFragment.smali	2026-07-16 20:24:33.430565488 -0400
 @@ -1559,20 +1559,11 @@
  .end method
  
@@ -5282,7 +5380,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
  .method public onDestroyView()V
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/util/CustomBottomSheetDialogFragment.smali base/smali_classes6/com/groupme/android/util/CustomBottomSheetDialogFragment.smali
 --- base_clean/smali_classes6/com/groupme/android/util/CustomBottomSheetDialogFragment.smali	2026-05-11 14:55:09.224366696 -0400
-+++ base/smali_classes6/com/groupme/android/util/CustomBottomSheetDialogFragment.smali	2026-05-17 19:45:12.128158730 -0400
++++ base/smali_classes6/com/groupme/android/util/CustomBottomSheetDialogFragment.smali	2026-07-16 20:24:33.430565488 -0400
 @@ -35,6 +35,8 @@
      .line 24
      invoke-virtual {p0, p1}, Lcom/groupme/android/util/CustomBottomSheetDialogFragment;->setNavigationBarColor(Landroid/app/Dialog;)V
@@ -5294,7 +5392,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorDetailsAdapter.smali base/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorDetailsAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorDetailsAdapter.smali	2026-05-11 14:55:09.832366696 -0400
-+++ base/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorDetailsAdapter.smali	2026-05-17 19:36:02.452158940 -0400
++++ base/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorDetailsAdapter.smali	2026-07-16 20:24:33.430565488 -0400
 @@ -225,6 +225,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5305,7 +5403,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p2, Lcom/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorDetailsAdapter$ItemViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorsListAdapter.smali base/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorsListAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorsListAdapter.smali	2026-05-11 14:55:09.856366696 -0400
-+++ base/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorsListAdapter.smali	2026-05-17 19:36:02.452158940 -0400
++++ base/smali_classes6/com/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorsListAdapter.smali	2026-07-16 20:24:33.434565488 -0400
 @@ -218,6 +218,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5316,7 +5414,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p2, Lcom/groupme/android/util/devtools/accessibility/adapters/AccessibilityErrorsListAdapter$ItemViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/util/devtools/ecs/adapter/ECSPropertiesAdapter.smali base/smali_classes6/com/groupme/android/util/devtools/ecs/adapter/ECSPropertiesAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/util/devtools/ecs/adapter/ECSPropertiesAdapter.smali	2026-05-11 14:55:09.896366696 -0400
-+++ base/smali_classes6/com/groupme/android/util/devtools/ecs/adapter/ECSPropertiesAdapter.smali	2026-05-17 19:36:02.452158940 -0400
++++ base/smali_classes6/com/groupme/android/util/devtools/ecs/adapter/ECSPropertiesAdapter.smali	2026-07-16 20:24:33.434565488 -0400
 @@ -690,6 +690,7 @@
      invoke-virtual {p2, v0, p1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5335,7 +5433,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/util/devtools/ecs/adapter/ECSPropertiesAdapter$PropertyViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/util/devtools/media/MediaUploadLogAdapter.smali base/smali_classes6/com/groupme/android/util/devtools/media/MediaUploadLogAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/util/devtools/media/MediaUploadLogAdapter.smali	2026-05-11 14:55:09.968366696 -0400
-+++ base/smali_classes6/com/groupme/android/util/devtools/media/MediaUploadLogAdapter.smali	2026-05-17 19:36:02.456158940 -0400
++++ base/smali_classes6/com/groupme/android/util/devtools/media/MediaUploadLogAdapter.smali	2026-07-16 20:24:33.434565488 -0400
 @@ -995,6 +995,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5346,7 +5444,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/util/devtools/media/MediaUploadLogAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/welcome/countrycodeflagpicker/CountryCodeFlagAdapter.smali base/smali_classes6/com/groupme/android/welcome/countrycodeflagpicker/CountryCodeFlagAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/welcome/countrycodeflagpicker/CountryCodeFlagAdapter.smali	2026-05-11 14:55:10.456366695 -0400
-+++ base/smali_classes6/com/groupme/android/welcome/countrycodeflagpicker/CountryCodeFlagAdapter.smali	2026-05-17 19:36:02.456158940 -0400
++++ base/smali_classes6/com/groupme/android/welcome/countrycodeflagpicker/CountryCodeFlagAdapter.smali	2026-07-16 20:24:33.434565488 -0400
 @@ -436,6 +436,7 @@
      invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5357,7 +5455,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p2, Lcom/groupme/android/welcome/countrycodeflagpicker/CountryCodeFlagAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/welcome/create_account/CreateAccountPickerFragment.smali base/smali_classes6/com/groupme/android/welcome/create_account/CreateAccountPickerFragment.smali
 --- base_clean/smali_classes6/com/groupme/android/welcome/create_account/CreateAccountPickerFragment.smali	2026-05-11 14:55:10.484366695 -0400
-+++ base/smali_classes6/com/groupme/android/welcome/create_account/CreateAccountPickerFragment.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/welcome/create_account/CreateAccountPickerFragment.smali	2026-07-16 20:24:33.434565488 -0400
 @@ -913,6 +913,10 @@
  
      move-result-object v1
@@ -5398,7 +5496,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      .line 109
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/widget/GradientActionButton.smali base/smali_classes6/com/groupme/android/widget/GradientActionButton.smali
 --- base_clean/smali_classes6/com/groupme/android/widget/GradientActionButton.smali	2026-05-11 14:55:10.692366695 -0400
-+++ base/smali_classes6/com/groupme/android/widget/GradientActionButton.smali	2026-05-17 18:39:52.008160225 -0400
++++ base/smali_classes6/com/groupme/android/widget/GradientActionButton.smali	2026-07-16 20:24:33.438565488 -0400
 @@ -375,3 +375,25 @@
  
      return-void
@@ -5427,7 +5525,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerGifsAdapter.smali base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerGifsAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerGifsAdapter.smali	2026-05-11 14:55:10.912366695 -0400
-+++ base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerGifsAdapter.smali	2026-05-17 19:36:02.456158940 -0400
++++ base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerGifsAdapter.smali	2026-07-16 20:24:33.438565488 -0400
 @@ -417,6 +417,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5438,7 +5536,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/widget/bannerpicker/adapters/BannerGifsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerImageSearchAdapter.smali base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerImageSearchAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerImageSearchAdapter.smali	2026-05-11 14:55:10.908366695 -0400
-+++ base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerImageSearchAdapter.smali	2026-05-17 19:39:43.164158855 -0400
++++ base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerImageSearchAdapter.smali	2026-07-16 20:24:33.438565488 -0400
 @@ -408,6 +408,8 @@
  
      invoke-direct {p1, p0}, Lcom/groupme/android/widget/bannerpicker/adapters/BannerImageSearchAdapter$ViewHolder;-><init>(Landroid/view/View;)V
@@ -5450,7 +5548,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerPostersAdapter.smali base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerPostersAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerPostersAdapter.smali	2026-05-11 14:55:10.936366695 -0400
-+++ base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerPostersAdapter.smali	2026-05-17 19:36:02.456158940 -0400
++++ base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerPostersAdapter.smali	2026-07-16 20:24:33.438565488 -0400
 @@ -496,6 +496,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5461,7 +5559,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/widget/bannerpicker/adapters/BannerPostersAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerTagsAdapter.smali base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerTagsAdapter.smali
 --- base_clean/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerTagsAdapter.smali	2026-05-11 14:55:10.920366695 -0400
-+++ base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerTagsAdapter.smali	2026-05-17 19:36:02.460158940 -0400
++++ base/smali_classes6/com/groupme/android/widget/bannerpicker/adapters/BannerTagsAdapter.smali	2026-07-16 20:24:33.438565488 -0400
 @@ -329,6 +329,7 @@
      invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
  
@@ -5472,7 +5570,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      new-instance p1, Lcom/groupme/android/widget/bannerpicker/adapters/BannerTagsAdapter$ViewHolder;
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/groupme/model/LegacyDatabaseHelper.smali base/smali_classes6/com/groupme/model/LegacyDatabaseHelper.smali
 --- base_clean/smali_classes6/com/groupme/model/LegacyDatabaseHelper.smali	2026-05-11 14:55:13.792366694 -0400
-+++ base/smali_classes6/com/groupme/model/LegacyDatabaseHelper.smali	2026-07-16 15:00:25.666572907 -0400
++++ base/smali_classes6/com/groupme/model/LegacyDatabaseHelper.smali	2026-07-16 20:24:33.442565488 -0400
 @@ -266,10 +266,22 @@
  
      const/4 v1, 0x0
@@ -5498,7 +5596,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes6/com/group
      if-eqz p1, :cond_1
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/microsoft/fluentui/persona/AvatarGroupView.smali base/smali_classes7/com/microsoft/fluentui/persona/AvatarGroupView.smali
 --- base_clean/smali_classes7/com/microsoft/fluentui/persona/AvatarGroupView.smali	2026-05-11 14:55:07.448366697 -0400
-+++ base/smali_classes7/com/microsoft/fluentui/persona/AvatarGroupView.smali	2026-05-17 18:39:52.012160225 -0400
++++ base/smali_classes7/com/microsoft/fluentui/persona/AvatarGroupView.smali	2026-07-16 20:24:33.442565488 -0400
 @@ -1207,3 +1207,61 @@
      :cond_6
      return-void
@@ -5563,7 +5661,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/micro
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/microsoft/fluentui/persona/AvatarView.smali base/smali_classes7/com/microsoft/fluentui/persona/AvatarView.smali
 --- base_clean/smali_classes7/com/microsoft/fluentui/persona/AvatarView.smali	2026-05-11 14:55:07.416366697 -0400
-+++ base/smali_classes7/com/microsoft/fluentui/persona/AvatarView.smali	2026-05-17 18:39:52.012160225 -0400
++++ base/smali_classes7/com/microsoft/fluentui/persona/AvatarView.smali	2026-07-16 20:24:33.442565488 -0400
 @@ -1938,3 +1938,61 @@
  
      return-void
@@ -5628,7 +5726,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/micro
 +.end method
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali
 --- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali	2026-05-11 14:55:20.932366691 -0400
-+++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali	2026-05-17 18:39:52.012160225 -0400
++++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchBottomSheetFragment.smali	2026-07-16 20:24:33.442565488 -0400
 @@ -1036,6 +1036,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -5643,7 +5741,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/micro
      .line 177
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali
 --- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali	2026-05-11 14:55:20.948366691 -0400
-+++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali	2026-05-17 18:39:52.012160225 -0400
++++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchFragment.smali	2026-07-16 20:24:33.442565488 -0400
 @@ -830,6 +830,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 0
@@ -5658,7 +5756,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/micro
      .line 98
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali
 --- base_clean/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali	2026-05-11 14:55:20.964366691 -0400
-+++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali	2026-05-17 18:39:52.012160225 -0400
++++ base/smali_classes7/com/microsoft/mediacanvas/visualsearch/VisualSearchWebActivity.smali	2026-07-16 20:24:33.442565488 -0400
 @@ -242,7 +242,12 @@
      .line 21
      invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
@@ -5674,7 +5772,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/micro
      move-result-object p1
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali base/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali
 --- base_clean/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali	2026-05-11 14:55:21.240366691 -0400
-+++ base/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali	2026-05-17 18:39:52.012160225 -0400
++++ base/smali_classes7/com/microsoft/office/feedback/inapp/MainActivity.smali	2026-07-16 20:24:33.442565488 -0400
 @@ -406,7 +406,12 @@
      :cond_0
      invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
@@ -5690,7 +5788,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/micro
      if-nez v0, :cond_1
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali base/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali
 --- base_clean/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali	2026-05-11 14:55:21.280366691 -0400
-+++ base/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali	2026-05-17 18:39:52.012160225 -0400
++++ base/smali_classes7/com/microsoft/office/feedback/inapp/WebInterfaceFragment.smali	2026-07-16 20:24:33.442565488 -0400
 @@ -938,6 +938,11 @@
  .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
      .locals 1
@@ -5705,7 +5803,7 @@ diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/micro
  
 diff -urN --no-dereference '--exclude=build' base_clean/smali_classes7/com/microsoft/office/lenssdk/utils/FileUtils.smali base/smali_classes7/com/microsoft/office/lenssdk/utils/FileUtils.smali
 --- base_clean/smali_classes7/com/microsoft/office/lenssdk/utils/FileUtils.smali	2026-05-11 14:55:21.796366691 -0400
-+++ base/smali_classes7/com/microsoft/office/lenssdk/utils/FileUtils.smali	2026-05-17 18:39:52.012160225 -0400
++++ base/smali_classes7/com/microsoft/office/lenssdk/utils/FileUtils.smali	2026-07-16 20:24:33.446565488 -0400
 @@ -826,29 +826,10 @@
  
      return v0
