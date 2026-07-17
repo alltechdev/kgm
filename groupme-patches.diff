@@ -852,3 +852,16 @@ diff -ruN '--exclude=apktool.yml' '--exclude=build' base_clean/smali_classes7/co
      .line 93
      iget-object v0, p0, Lcom/microsoft/office/feedback/inapp/WebInterfaceFragment;->feedbackInitOptions:Lcom/microsoft/feedback/types/FeedbackInitOptions;
  
+diff -urN --no-dereference '--exclude=build' base_clean/smali_classes4/com/groupme/android/net/ProtectedRequestQueue.smali base/smali_classes4/com/groupme/android/net/ProtectedRequestQueue.smali
+--- base_clean/smali_classes4/com/groupme/android/net/ProtectedRequestQueue.smali	2026-05-11 14:55:17.884366693 -0400
++++ base/smali_classes4/com/groupme/android/net/ProtectedRequestQueue.smali	2026-07-16 14:02:26.016918628 -0400
+@@ -176,7 +176,8 @@
+
+    instance-of v0, p1, Lcom/groupme/android/verification/GetVerificationNonceRequest;
+
+-    if-eqz v0, :cond_0
++    # KGM: skip Play Integrity check — always go to super.add()
++    goto :goto_1
+
+    goto :goto_1
+

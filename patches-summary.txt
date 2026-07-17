@@ -6,3 +6,4 @@
 - Camera (OneCameraActivity) fixed: falls back to internal getFilesDir() when getExternalFilesDir() returns null instead of crashing on /OneCameraClips at root
 - Facebook / Google / Microsoft sign-in buttons hidden (don't work on a debug-signed APK anyway) - only email + phone remain
 - Copilot stripped: CopilotV2State.isCopilotChatEnabled/isCopilotGroupMentionSettingUIEnabled forced false (cascades to all gated checks), and every Copilot Fragment/Activity (Ask Copilot, consent sheets, quiz/flashcard full-screens, leaderboard, chat selector, settings, group "Message Copilot" row) is killed at onCreateView/onCreate
+- Play Integrity bypass: ProtectedRequestQueue.add() skips IntegrityToken.get() entirely so login works on devices without Play Store
